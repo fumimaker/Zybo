@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../pattern.srcs/sources_1/imports/HDL" \
+"pattern_test_func_impl.v" \
+"../../../../../pattern.srcs/sim_1/imports/SIM/pattern_test.v" \
+
+# Do not sort compile order
+nosort
