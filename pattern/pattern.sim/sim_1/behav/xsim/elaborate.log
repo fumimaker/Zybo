@@ -1,6 +1,6 @@
 Vivado Simulator 2018.3
 Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto c1c8f67327e6498a93ed45a1267058ce --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot pattern_test_behav xil_defaultlib.pattern_test xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto c1c8f67327e6498a93ed45a1267058ce --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot pattern_test2_behav xil_defaultlib.pattern_test2 xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -17,6 +17,6 @@ Compiling module unisims_ver.MMCME2_BASE(CLKFBOUT_MULT_F=25.0...
 Compiling module xil_defaultlib.pckgen
 Compiling module xil_defaultlib.syncgen
 Compiling module xil_defaultlib.pattern
-Compiling module xil_defaultlib.pattern_test
+Compiling module xil_defaultlib.pattern_test2
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot pattern_test_behav
+Built simulation snapshot pattern_test2_behav
