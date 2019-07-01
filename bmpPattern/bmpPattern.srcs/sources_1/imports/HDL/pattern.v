@@ -6,29 +6,29 @@
 module pattern(
     input               CLK,
     input               RST,
-    output  reg [3:0]   VGA_R,
-    output  reg [3:0]   VGA_G,
-    output  reg [3:0]   VGA_B,
+    output  reg [4:0]   VGA_R, //5bit
+    output  reg [5:0]   VGA_G, //6bit
+    output  reg [4:0]   VGA_B, //5bit
     output              VGA_HS,
     output              VGA_VS
 );
 
-reg [15:0] rom [0:511999]; //640*480 = 307200byte  512000byte 
+reg [15:0] rom [0:511999]; //640*480*2byte = 307200byte  512000byte 
 
 initial begin
     `ifdef SIMULATION
-        $readmemh("../../../akariMonoNoHeader.raw", rom, 0, 629);
+        $readmemh("../../../akariMonoNoHeader.raw", rom, 0, 8'h96047);//614471byte
     `else
-        $readmemh("../../../akariMonoNoHeader.raw", rom, 0, 629);
+        $readmemh("../../../akariMonoNoHeader.raw", rom, 0, 8'h96047);
     `endif
 end
 
 /* VGA(640×480)用パラメータ読み込み */
 `include "vga_param.vh"
-
+/*
 localparam HSIZE = 10'd80;
 localparam VSIZE = 10'd120;
-
+*/
 /* 同期信号作成回路の接続 */
 wire            PCK;
 wire    [9:0]   HCNT, VCNT;
