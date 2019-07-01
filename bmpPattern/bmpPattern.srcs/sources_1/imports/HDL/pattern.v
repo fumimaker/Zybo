@@ -13,13 +13,13 @@ module pattern(
     output              VGA_VS
 );
 
-reg [15:0] rom [0:511999]; //640*480*2byte = 307200byte  512000byte 
+reg [15:0] rom [0:1048575]; //640*480*2byte = 614400byte  ==> 1Mbyte(1048576byte)
 
 initial begin
     `ifdef SIMULATION
-        $readmemh("../../../akariMonoNoHeader.raw", rom, 0, 8'h96047);//614471byte
+        $readmemh("../../../akariMonoNoHeader.raw", rom, 0, 8'h96001);//96001 614401
     `else
-        $readmemh("../../../akariMonoNoHeader.raw", rom, 0, 8'h96047);
+        $readmemh("../../../akariMonoNoHeader.raw", rom, 0, 8'h96001);
     `endif
 end
 
@@ -50,15 +50,21 @@ wire [9:0] VBLANK = VFRONT + VWIDTH + VBACK;
 wire disp_enable = (VBLANK <= VCNT)
                 && (HBLANK-10'd1 <= HCNT) && (HCNT < HPERIOD-10'd1);
 
+/*
 wire [2:0] rgb_0 = (HCNT-HBLANK+10'd1)/HSIZE;
 wire [2:0] rgb_1 = (((VCNT-VBLANK)/VSIZE)&1)==0 ? 3'd7-rgb_0: rgb_0;
+*/
+
+wire r [4:0]    = 8'hFFFFF;
+wire g [5:0]    = 8'hFFFFFF; //6bit
+wire b [4:0]    = 8'hFFFFF;
 
 always @( posedge PCK ) begin
+    
     if ( RST )
         {VGA_R, VGA_G, VGA_B} <= 12'h000;
     else if ( disp_enable )
-        {VGA_R, VGA_G, VGA_B} <=
-                    { {4{rgb_1[0]}}, {4{rgb_1[1]}}, {4{rgb_1[2]}} };
+        {VGA_R, VGA_G, VGA_B} <= {r, g, b}; //‚·‚×‚ÄMAX‚È‚Ì‚Å‘S•””’‚É‚È‚é‚Í‚¸
     else
         {VGA_R, VGA_G, VGA_B} <= 12'h000;
 end
