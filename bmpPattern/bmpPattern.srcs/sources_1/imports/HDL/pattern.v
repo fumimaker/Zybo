@@ -13,6 +13,16 @@ module pattern(
     output              VGA_VS
 );
 
+reg [15:0] rom [0:511999]; //640*480 = 307200byte  512000byte 
+
+initial begin
+    `ifdef SIMULATION
+        $readmemh("../../../akariMonoNoHeader.raw", rom, 0, 629);
+    `else
+        $readmemh("../../../akariMonoNoHeader.raw", rom, 0, 629);
+    `endif
+end
+
 /* VGA(640×480)用パラメータ読み込み */
 `include "vga_param.vh"
 
@@ -48,7 +58,7 @@ always @( posedge PCK ) begin
         {VGA_R, VGA_G, VGA_B} <= 12'h000;
     else if ( disp_enable )
         {VGA_R, VGA_G, VGA_B} <=
-                    { {4{rgb_1[2]}}, {4{rgb_1[1]}}, {4{rgb_1[0]}} };
+                    { {4{rgb_1[0]}}, {4{rgb_1[1]}}, {4{rgb_1[2]}} };
     else
         {VGA_R, VGA_G, VGA_B} <= 12'h000;
 end
