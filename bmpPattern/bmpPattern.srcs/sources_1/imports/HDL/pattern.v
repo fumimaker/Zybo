@@ -17,9 +17,9 @@ reg [15:0] rom [0:1048575]; //640*480*2byte = 614400byte  ==> 1Mbyte(1048576byte
 
 initial begin
     `ifdef SIMULATION
-        $readmemh("../../../akariMonoNoHeader.raw", rom, 0, 8'h96001);//96001 614401
+        $readmemh("../../../../akari16bitNoHeader.raw", rom, 0, 8'h96001);//96001 614401
     `else
-        $readmemh("../../../akariMonoNoHeader.raw", rom, 0, 8'h96001);
+        $readmemh("../../../../akari16bitNoHeader.raw", rom, 0, 8'h96001);
     `endif
 end
 
@@ -55,16 +55,18 @@ wire [2:0] rgb_0 = (HCNT-HBLANK+10'd1)/HSIZE;
 wire [2:0] rgb_1 = (((VCNT-VBLANK)/VSIZE)&1)==0 ? 3'd7-rgb_0: rgb_0;
 */
 
-wire r [4:0]    = 8'hFFFFF;
-wire g [5:0]    = 8'hFFFFFF; //6bit
-wire b [4:0]    = 8'hFFFFF;
+/*
+reg r [4:0]    = 8'hFFFFF;
+reg g [5:0]    = 8'hFFFFFF; //6bit
+reg b [4:0]    = 8'hFFFFF;
+*/
 
 always @( posedge PCK ) begin
     
     if ( RST )
         {VGA_R, VGA_G, VGA_B} <= 12'h000;
     else if ( disp_enable )
-        {VGA_R, VGA_G, VGA_B} <= {r, g, b}; //‚·‚×‚ÄMAX‚È‚Ì‚Å‘S•””’‚É‚È‚é‚Í‚¸
+        {VGA_R, VGA_G, VGA_B} <= {8'hFFFFF, 8'hFFFFFF, 8'hFFFFF}; //‚·‚×‚ÄMAX‚È‚Ì‚Å‘S•””’‚É‚È‚é‚Í‚¸
     else
         {VGA_R, VGA_G, VGA_B} <= 12'h000;
 end

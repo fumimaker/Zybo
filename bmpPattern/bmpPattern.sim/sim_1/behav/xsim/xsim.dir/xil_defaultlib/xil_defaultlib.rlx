@@ -1,0 +1,10 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+C:/Users/fumi/Zybo/bmpPattern/bmpPattern.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+C:/Users/fumi/Zybo/bmpPattern/bmpPattern.srcs/sim_1/new/bmpPattern_test.v,1561984316,verilog,,,,bmpPattern_test,,,../../../../bmpPattern.srcs/sources_1/imports/HDL;Y:/Downloads/XilinxFPGA/Zybo/dai2-3sho/pattern/HDL,,,,,
+C:/Users/fumi/Zybo/bmpPattern/bmpPattern.srcs/sources_1/imports/HDL/pattern.v,1561984009,verilog,,C:/Users/fumi/Zybo/bmpPattern/bmpPattern.srcs/sources_1/imports/HDL/pckgen.v,C:/Users/fumi/Zybo/bmpPattern/bmpPattern.srcs/sources_1/imports/HDL/vga_param.vh,pattern,,,../../../../bmpPattern.srcs/sources_1/imports/HDL;Y:/Downloads/XilinxFPGA/Zybo/dai2-3sho/pattern/HDL,,,,,
+C:/Users/fumi/Zybo/bmpPattern/bmpPattern.srcs/sources_1/imports/HDL/pckgen.v,1477117740,verilog,,C:/Users/fumi/Zybo/bmpPattern/bmpPattern.srcs/sources_1/imports/HDL/syncgen.v,,pckgen,,,../../../../bmpPattern.srcs/sources_1/imports/HDL;Y:/Downloads/XilinxFPGA/Zybo/dai2-3sho/pattern/HDL,,,,,
+C:/Users/fumi/Zybo/bmpPattern/bmpPattern.srcs/sources_1/imports/HDL/syncgen.v,1466294632,verilog,,C:/Users/fumi/Zybo/bmpPattern/bmpPattern.srcs/sim_1/new/bmpPattern_test.v,C:/Users/fumi/Zybo/bmpPattern/bmpPattern.srcs/sources_1/imports/HDL/vga_param.vh,syncgen,,,../../../../bmpPattern.srcs/sources_1/imports/HDL;Y:/Downloads/XilinxFPGA/Zybo/dai2-3sho/pattern/HDL,,,,,
+C:/Users/fumi/Zybo/bmpPattern/bmpPattern.srcs/sources_1/imports/HDL/vga_param.vh,1467450956,verilog,,,,,,,,,,,,

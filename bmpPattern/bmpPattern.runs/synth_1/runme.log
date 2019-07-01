@@ -14,9 +14,13 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 2156 
+INFO: Helper process launched with PID 3460 
+WARNING: [Synth 8-2292] literal value truncated to fit in 8 bits [C:/Users/fumi/Zybo/bmpPattern/bmpPattern.srcs/sources_1/imports/HDL/pattern.v:22]
+WARNING: [Synth 8-2292] literal value truncated to fit in 8 bits [C:/Users/fumi/Zybo/bmpPattern/bmpPattern.srcs/sources_1/imports/HDL/pattern.v:69]
+WARNING: [Synth 8-2292] literal value truncated to fit in 8 bits [C:/Users/fumi/Zybo/bmpPattern/bmpPattern.srcs/sources_1/imports/HDL/pattern.v:69]
+WARNING: [Synth 8-2292] literal value truncated to fit in 8 bits [C:/Users/fumi/Zybo/bmpPattern/bmpPattern.srcs/sources_1/imports/HDL/pattern.v:69]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 381.207 ; gain = 101.602
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 393.477 ; gain = 112.887
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'pattern' [C:/Users/fumi/Zybo/bmpPattern/bmpPattern.srcs/sources_1/imports/HDL/pattern.v:6]
 	Parameter HPERIOD bound to: 10'b1100100000 
@@ -27,8 +31,7 @@ INFO: [Synth 8-6157] synthesizing module 'pattern' [C:/Users/fumi/Zybo/bmpPatter
 	Parameter VFRONT bound to: 10'b0000001010 
 	Parameter VWIDTH bound to: 10'b0000000010 
 	Parameter VBACK bound to: 10'b0000100001 
-	Parameter HSIZE bound to: 10'b0001010000 
-	Parameter VSIZE bound to: 10'b0001111000 
+INFO: [Synth 8-3876] $readmem data file '../../../../akari16bitNoHeader.raw' is read successfully [C:/Users/fumi/Zybo/bmpPattern/bmpPattern.srcs/sources_1/imports/HDL/pattern.v:22]
 INFO: [Synth 8-6157] synthesizing module 'syncgen' [C:/Users/fumi/Zybo/bmpPattern/bmpPattern.srcs/sources_1/imports/HDL/syncgen.v:6]
 	Parameter HPERIOD bound to: 10'b1100100000 
 	Parameter HFRONT bound to: 10'b0000010000 
@@ -74,9 +77,11 @@ INFO: [Synth 8-6157] synthesizing module 'MMCME2_BASE' [C:/Xilinx/Vivado/2018.3/
 INFO: [Synth 8-6155] done synthesizing module 'MMCME2_BASE' (2#1) [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26837]
 INFO: [Synth 8-6155] done synthesizing module 'pckgen' (3#1) [C:/Users/fumi/Zybo/bmpPattern/bmpPattern.srcs/sources_1/imports/HDL/pckgen.v:7]
 INFO: [Synth 8-6155] done synthesizing module 'syncgen' (4#1) [C:/Users/fumi/Zybo/bmpPattern/bmpPattern.srcs/sources_1/imports/HDL/syncgen.v:6]
+INFO: [Synth 8-4471] merging register 'VGA_R_reg[4:0]' into 'VGA_B_reg[4:0]' [C:/Users/fumi/Zybo/bmpPattern/bmpPattern.srcs/sources_1/imports/HDL/pattern.v:67]
+WARNING: [Synth 8-6014] Unused sequential element VGA_R_reg was removed.  [C:/Users/fumi/Zybo/bmpPattern/bmpPattern.srcs/sources_1/imports/HDL/pattern.v:67]
 INFO: [Synth 8-6155] done synthesizing module 'pattern' (5#1) [C:/Users/fumi/Zybo/bmpPattern/bmpPattern.srcs/sources_1/imports/HDL/pattern.v:6]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 436.590 ; gain = 156.984
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 426.250 ; gain = 145.660
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -89,10 +94,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 436.590 ; gain = 156.984
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 426.250 ; gain = 145.660
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 436.590 ; gain = 156.984
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 426.250 ; gain = 145.660
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -106,36 +111,37 @@ Finished Parsing XDC File [C:/Users/fumi/Zybo/bmpPattern/bmpPattern.srcs/constrs
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/fumi/Zybo/bmpPattern/bmpPattern.srcs/constrs_1/imports/pattern/pattern.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/pattern_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/pattern_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Timing 38-2] Deriving generated clocks
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 753.555 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 746.367 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 753.555 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 746.375 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   MMCME2_BASE => MMCME2_ADV: 1 instances
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 753.555 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 753.555 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 746.375 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 746.375 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 753.555 ; gain = 473.949
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 746.375 ; gain = 465.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 753.555 ; gain = 473.949
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 746.375 ; gain = 465.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 753.555 ; gain = 473.949
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 746.375 ; gain = 465.785
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "VGA_HS" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "VGA_VS" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4471] merging register 'VGA_G_reg[0:0]' into 'VGA_B_reg[0:0]' [C:/Users/fumi/Zybo/bmpPattern/bmpPattern.srcs/sources_1/imports/HDL/pattern.v:67]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 753.555 ; gain = 473.949
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 746.375 ; gain = 465.785
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -148,15 +154,11 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-	   2 Input     10 Bit       Adders := 3     
+	   2 Input     10 Bit       Adders := 2     
 +---Registers : 
 	               10 Bit    Registers := 2     
-	                4 Bit    Registers := 3     
-	                1 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
 +---Muxes : 
-	   2 Input      4 Bit        Muxes := 6     
-	   2 Input      3 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 6     
 	   3 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
@@ -168,14 +170,8 @@ Start RTL Hierarchical Component Statistics
 Hierarchical RTL Component report 
 Module pattern 
 Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-	   2 Input     10 Bit       Adders := 1     
 +---Registers : 
-	                4 Bit    Registers := 3     
-+---Muxes : 
-	   2 Input      4 Bit        Muxes := 6     
-	   2 Input      3 Bit        Muxes := 1     
+	                1 Bit    Registers := 1     
 Module syncgen 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -202,21 +198,11 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-5544] ROM "syncgen/" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "syncgen/VGA_HS" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "syncgen/VGA_VS" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-3886] merging instance 'VGA_B_reg[0]' (FD) to 'VGA_B_reg[1]'
-INFO: [Synth 8-3886] merging instance 'VGA_B_reg[1]' (FD) to 'VGA_B_reg[2]'
-INFO: [Synth 8-3886] merging instance 'VGA_B_reg[2]' (FD) to 'VGA_B_reg[3]'
-INFO: [Synth 8-3886] merging instance 'VGA_G_reg[0]' (FD) to 'VGA_G_reg[1]'
-INFO: [Synth 8-3886] merging instance 'VGA_G_reg[1]' (FD) to 'VGA_G_reg[2]'
-INFO: [Synth 8-3886] merging instance 'VGA_G_reg[2]' (FD) to 'VGA_G_reg[3]'
-INFO: [Synth 8-3886] merging instance 'VGA_R_reg[0]' (FD) to 'VGA_R_reg[1]'
-INFO: [Synth 8-3886] merging instance 'VGA_R_reg[1]' (FD) to 'VGA_R_reg[2]'
-INFO: [Synth 8-3886] merging instance 'VGA_R_reg[2]' (FD) to 'VGA_R_reg[3]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 753.555 ; gain = 473.949
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 746.375 ; gain = 465.785
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -228,13 +214,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 763.430 ; gain = 483.824
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 761.801 ; gain = 481.211
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 786.445 ; gain = 506.840
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 782.074 ; gain = 501.484
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -246,7 +232,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 789.957 ; gain = 510.352
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 783.477 ; gain = 502.887
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -270,7 +256,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 789.957 ; gain = 510.352
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 783.477 ; gain = 502.887
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -283,7 +269,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 789.957 ; gain = 510.352
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 783.477 ; gain = 502.887
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -295,25 +281,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 789.957 ; gain = 510.352
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 783.477 ; gain = 502.887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 789.957 ; gain = 510.352
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 783.477 ; gain = 502.887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 789.957 ; gain = 510.352
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 783.477 ; gain = 502.887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 789.957 ; gain = 510.352
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 783.477 ; gain = 502.887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -330,51 +316,50 @@ Report Cell Usage:
 |      |Cell        |Count |
 +------+------------+------+
 |1     |BUFG        |     1|
-|2     |CARRY4      |    33|
-|3     |LUT1        |    31|
-|4     |LUT2        |    75|
-|5     |LUT3        |    26|
-|6     |LUT4        |    34|
-|7     |LUT5        |    35|
-|8     |LUT6        |    46|
-|9     |MMCME2_BASE |     1|
-|10    |FDRE        |    23|
-|11    |FDSE        |     2|
-|12    |IBUF        |     2|
-|13    |OBUF        |    14|
+|2     |LUT1        |     1|
+|3     |LUT2        |     5|
+|4     |LUT3        |     3|
+|5     |LUT4        |     7|
+|6     |LUT5        |    10|
+|7     |LUT6        |    12|
+|8     |MMCME2_BASE |     1|
+|9     |FDRE        |    21|
+|10    |FDSE        |     2|
+|11    |IBUF        |     2|
+|12    |OBUF        |    18|
 +------+------------+------+
 
 Report Instance Areas: 
 +------+-----------+--------+------+
 |      |Instance   |Module  |Cells |
 +------+-----------+--------+------+
-|1     |top        |        |   323|
-|2     |  syncgen  |syncgen |   289|
+|1     |top        |        |    83|
+|2     |  syncgen  |syncgen |    62|
 |3     |    pckgen |pckgen  |     2|
 +------+-----------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 789.957 ; gain = 510.352
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 783.477 ; gain = 502.887
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 789.957 ; gain = 193.387
-Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 789.957 ; gain = 510.352
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 783.477 ; gain = 182.762
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 783.477 ; gain = 502.887
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 34 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 789.957 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 783.477 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   MMCME2_BASE => MMCME2_ADV: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-40 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+33 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 789.957 ; gain = 522.293
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 789.957 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 783.477 ; gain = 515.137
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 783.477 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/fumi/Zybo/bmpPattern/bmpPattern.runs/synth_1/pattern.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file pattern_utilization_synth.rpt -pb pattern_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Jul  1 18:23:39 2019...
+INFO: [Common 17-206] Exiting Vivado at Mon Jul  1 21:27:49 2019...

@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../bmpPattern.srcs/sources_1/imports/HDL" --include "Y:/Downloads/XilinxFPGA/Zybo/dai2-3sho/pattern/HDL" \
+"../../../../bmpPattern.srcs/sources_1/imports/HDL/pattern.v" \
+"../../../../bmpPattern.srcs/sources_1/imports/HDL/pckgen.v" \
+"../../../../bmpPattern.srcs/sources_1/imports/HDL/syncgen.v" \
+"../../../../bmpPattern.srcs/sim_1/new/bmpPattern_test.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

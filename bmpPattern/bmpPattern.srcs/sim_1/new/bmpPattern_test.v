@@ -28,7 +28,8 @@ localparam CLKNUM = (800*525+12000)*5;
 
 reg             CLK;
 reg             RST;
-wire    [3:0]   VGA_R, VGA_G, VGA_B;
+wire    [4:0]   VGA_R, VGA_B;
+wire    [5:0]   VGA_G;
 wire            VGA_HS;
 wire            VGA_VS;
 
