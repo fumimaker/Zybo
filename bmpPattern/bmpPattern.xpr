@@ -69,6 +69,13 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/new/rommodule.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/HDL/vga_param.vh">
         <FileInfo>
           <Attr Name="ImportPath" Val="Y:/Downloads/XilinxFPGA/Zybo/dai2-3sho/pattern/HDL/vga_param.vh"/>

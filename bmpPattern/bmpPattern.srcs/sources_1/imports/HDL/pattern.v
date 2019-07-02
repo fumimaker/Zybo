@@ -6,11 +6,14 @@
 module pattern(
     input               CLK,
     input               RST,
+    input   reg [8:0]   DATA,
     output  reg [4:0]   VGA_R, //5bit
     output  reg [5:0]   VGA_G, //6bit
     output  reg [4:0]   VGA_B, //5bit
     output              VGA_HS,
-    output              VGA_VS
+    output              VGA_VS,
+    output              EN,
+    output              ADDR
 );
 
 //reg [15:0] rom [0:100000]; //640*480*2byte = 614400byte(614kbyte)  ==> 1Mbyte(1048576byte)
@@ -52,6 +55,15 @@ syncgen syncgen(
     .VCNT   (VCNT)
 );
 
+rommodule rommodule(
+    .CLK    (CLK),
+    .EN     (EN),
+    .ADDR   (ADDR),
+    .DATA   (DATA)
+);
+
+
+
 /* RGB出力を作成 */
 wire [9:0] HBLANK = HFRONT + HWIDTH + HBACK;
 wire [9:0] VBLANK = VFRONT + VWIDTH + VBACK;
@@ -70,20 +82,14 @@ reg g [5:0]    = 8'hFFFFFF; //6bit
 reg b [4:0]    = 8'hFFFFF;
 */
 
-wire en = disp_enable && !RST
-
-always @( posedge PCK ) begin
-    if(en)
-        
+wire = 
 
 always @( posedge PCK ) begin
     if ( RST )
         {VGA_R, VGA_G, VGA_B} <= 12'h000;
     else if ( disp_enable )
         
-        //{VGA_R, VGA_G, VGA_B} <= {8'h00000, 8'hFFFF00, 8'h00000}; //すべてMAXなので全部白になるはず
-        
-        {VGA_R, VGA_G, VGA_B} <= {rom[0], rom[1], rom[2]}; //すべてMAXなので全部白になるはず
+        {VGA_R, VGA_G, VGA_B} <= {8'h00000, 8'hFFFF00, 8'h00000}; //すべてMAXなので全部白になるはず
     else
         {VGA_R, VGA_G, VGA_B} <= 12'h000;
 end
