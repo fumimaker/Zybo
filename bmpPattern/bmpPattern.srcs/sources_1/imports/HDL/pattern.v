@@ -6,7 +6,6 @@
 module pattern(
     input               CLK,
     input               RST,
-    input   reg [8:0]   DATA,
     output  reg [4:0]   VGA_R, //5bit
     output  reg [5:0]   VGA_G, //6bit
     output  reg [4:0]   VGA_B, //5bit
@@ -58,10 +57,9 @@ syncgen syncgen(
 rommodule rommodule(
     .CLK    (CLK),
     .EN     (EN),
-    .ADDR   (ADDR),
+    .ADDR   (addrTemp),
     .DATA   (DATA)
 );
-
 
 
 /* RGBèoóÕÇçÏê¨ */
@@ -76,22 +74,29 @@ wire [2:0] rgb_0 = (HCNT-HBLANK+10'd1)/HSIZE;
 wire [2:0] rgb_1 = (((VCNT-VBLANK)/VSIZE)&1)==0 ? 3'd7-rgb_0: rgb_0;
 */
 
-/*
-reg r [4:0]    = 8'hFFFFF;
-reg g [5:0]    = 8'hFFFFFF; //6bit
-reg b [4:0]    = 8'hFFFFF;
-*/
-
-wire = 
+reg [4:0] r;
+reg [5:0] g;
+reg [4:0] b;
 
 always @( posedge PCK ) begin
     if ( RST )
         {VGA_R, VGA_G, VGA_B} <= 12'h000;
     else if ( disp_enable )
-        
-        {VGA_R, VGA_G, VGA_B} <= {8'h00000, 8'hFFFF00, 8'h00000}; //Ç∑Ç◊ÇƒMAXÇ»ÇÃÇ≈ëSïîîíÇ…Ç»ÇÈÇÕÇ∏
+        begin
+            r <= (DATA & 16'hF800)>>11;
+            g <= (DATA & 16'h7E0)>>5;
+            b <= (DATA & 16'h1F);
+            {VGA_R, VGA_G, VGA_B} = {r, g, b}; 
+        end
     else
         {VGA_R, VGA_G, VGA_B} <= 12'h000;
 end
 
+reg [8:0] addrTemp;
+always @(posedge PCK) begin
+    if(RST)
+        addrTemp <= 0;
+    else if(disp_enable)
+        addrTemp <= addrTemp + 1;
+end
 endmodule

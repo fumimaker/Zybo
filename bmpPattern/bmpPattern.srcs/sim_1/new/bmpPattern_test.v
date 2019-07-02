@@ -16,7 +16,6 @@ reg             RST;
 wire    [3:0]   VGA_R, VGA_G, VGA_B;
 wire            VGA_HS;
 wire            VGA_VS;
-reg     [15:0]  rom     [0:62499]; //1000000バイト超えない最大値でテスト
 
 /* パターン表示回路を接続 */
 pattern pattern(

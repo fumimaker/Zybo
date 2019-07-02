@@ -27,13 +27,13 @@ module rommodule(
 	output reg [15:0] DATA
 );
 
-reg [15:0] rom [0:62499];
+reg [15:0] rom [0:151249];
 
 initial begin
 `ifdef SIMULATION
-	$readmemh("../../../../akari16bitNoHeader.raw", rom, 0, 62499);
+	$readmemh("../../../../akarimini16bit.raw", rom, 0, 151249);
 `else
-	$readmemh("../../../../akari16bitNoHeader.raw", rom, 0, 62499);
+	$readmemh("../../../../akarimini16bit.raw", rom, 0, 151249);
 `endif
 end
 
