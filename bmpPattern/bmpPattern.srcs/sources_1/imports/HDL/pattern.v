@@ -13,11 +13,14 @@ module pattern(
     output              VGA_VS
 );
 
-reg [15:0] rom [0:1048575]; //640*480*2byte = 614400byte  ==> 1Mbyte(1048576byte)
+reg [15:0] rom [0:100000]; //640*480*2byte = 614400byte(614kbyte)  ==> 1Mbyte(1048576byte)
+
+reg     [639:0] WIDTH;
+reg     [479:0] HEIGHT;
 
 initial begin
     `ifdef SIMULATION
-        $readmemh("../../../../akari16bitNoHeader.raw", rom, 0, 8'h96001);//96001 614401
+        $readmemh("../../../../akari16bitNoHeader.raw", rom, 0, 8'h96001);//0x96001 614401
     `else
         $readmemh("../../../../akari16bitNoHeader.raw", rom, 0, 8'h96001);
     `endif
@@ -66,7 +69,10 @@ always @( posedge PCK ) begin
     if ( RST )
         {VGA_R, VGA_G, VGA_B} <= 12'h000;
     else if ( disp_enable )
-        {VGA_R, VGA_G, VGA_B} <= {8'hFFFFF, 8'hFFFFFF, 8'hFFFFF}; //‚·‚×‚ÄMAX‚È‚Ì‚Å‘S•””’‚É‚È‚é‚Í‚¸
+        
+        //{VGA_R, VGA_G, VGA_B} <= {8'h00000, 8'hFFFF00, 8'h00000}; //‚·‚×‚ÄMAX‚È‚Ì‚Å‘S•””’‚É‚È‚é‚Í‚¸
+        
+        {VGA_R, VGA_G, VGA_B} <= {rom[0], rom[1], rom[2]}; //‚·‚×‚ÄMAX‚È‚Ì‚Å‘S•””’‚É‚È‚é‚Í‚¸
     else
         {VGA_R, VGA_G, VGA_B} <= 12'h000;
 end

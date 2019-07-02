@@ -34,6 +34,18 @@ wire            VGA_HS;
 wire            VGA_VS;
 
 
+
+reg [15:0] rom [0:1048575]; //640*480*2byte = 614400byte  ==> 1Mbyte(1048576byte)
+
+
+initial begin
+    `ifdef SIMULATION
+        $readmemh("../../../../akari16bitNoHeader.raw", rom, 0, 8'h96001);//96001 614401
+    `else
+        $readmemh("../../../../akari16bitNoHeader.raw", rom, 0, 8'h96001);
+    `endif
+end
+
 pattern pattern(
     .CLK    (CLK),
     .RST    (RST),

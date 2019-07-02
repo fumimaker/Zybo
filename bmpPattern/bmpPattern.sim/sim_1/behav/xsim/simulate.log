@@ -1,3 +1,4 @@
 Vivado Simulator 2018.3
 Time resolution is 1 ps
 ERROR: Illegal hex digit '¬' found in data of file "../../../../akari16bitNoHeader.raw"
+ERROR: Illegal hex digit '¬' found in data of file "../../../../akari16bitNoHeader.raw"
