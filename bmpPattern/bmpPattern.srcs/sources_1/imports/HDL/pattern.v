@@ -13,25 +13,31 @@ module pattern(
     output              VGA_VS
 );
 
-reg [15:0] rom [0:100000]; //640*480*2byte = 614400byte(614kbyte)  ==> 1Mbyte(1048576byte)
+//reg [15:0] rom [0:100000]; //640*480*2byte = 614400byte(614kbyte)  ==> 1Mbyte(1048576byte)
+//reg [15:0] rom [0:62499]; //1000000バイト超えない最大値でテスト
 
-reg     [639:0] WIDTH;
-reg     [479:0] HEIGHT;
 
+
+/*
 initial begin
     `ifdef SIMULATION
         $readmemh("../../../../akari16bitNoHeader.raw", rom, 0, 8'h96001);//0x96001 614401
+        $readmemh("../../../../akari16bitNoHeader.raw", rom, 0, 62499);
     `else
         $readmemh("../../../../akari16bitNoHeader.raw", rom, 0, 8'h96001);
+        $readmemh("../../../../akari16bitNoHeader.raw", rom, 0, 62499);
     `endif
 end
+*/
 
 /* VGA(640×480)用パラメータ読み込み */
 `include "vga_param.vh"
+
 /*
 localparam HSIZE = 10'd80;
 localparam VSIZE = 10'd120;
 */
+
 /* 同期信号作成回路の接続 */
 wire            PCK;
 wire    [9:0]   HCNT, VCNT;
@@ -64,8 +70,13 @@ reg g [5:0]    = 8'hFFFFFF; //6bit
 reg b [4:0]    = 8'hFFFFF;
 */
 
+wire en = disp_enable && !RST
+
 always @( posedge PCK ) begin
-    
+    if(en)
+        
+
+always @( posedge PCK ) begin
     if ( RST )
         {VGA_R, VGA_G, VGA_B} <= 12'h000;
     else if ( disp_enable )
