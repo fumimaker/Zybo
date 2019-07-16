@@ -22,9 +22,13 @@
 
 module adder(
     input CLK,
-    input [7:0] A,
-    input [7:0] B,
-    output [7:0] Y
+    input RST,
+    input [7:0] A,B,
+    output reg [8:0] Y
     );
-    assign Y = A + B;
+    
+always @(posedge CLK)
+begin
+    if(!RST) Y <= A + B;
+end
 endmodule
