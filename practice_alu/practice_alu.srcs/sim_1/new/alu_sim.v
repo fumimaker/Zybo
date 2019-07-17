@@ -29,9 +29,10 @@ initial begin
     #STEP
     RST <= 0;
     #STEP
+    s <= 3'b011;
     a <= 8'd10;
-    b <= 8'd10;
-    s <= 3'b000;
+    b <= 8'd20;
+    #STEP
     $finish;
 end
 endmodule

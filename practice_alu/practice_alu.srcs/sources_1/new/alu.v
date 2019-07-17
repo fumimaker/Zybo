@@ -33,12 +33,12 @@ module alu(
         if(RST) y <= 0;
         else begin
            assign y =   s==3'b000 ? a :
-                        s==3'b000 ? b :
-                        s==3'b000 ? a&b :
-                        s==3'b000 ? a|b :
-                        s==3'b000 ? a<<1 :
-                        s==3'b000 ? a>>1 :
-                        s==3'b000 ? a+b : a-b;
+                        s==3'b001 ? b :
+                        s==3'b010 ? a&b :
+                        s==3'b011 ? a|b :
+                        s==3'b100 ? a<<1 :
+                        s==3'b101 ? a>>1 :
+                        s==3'b110 ? a+b : a-b;
                         
         end
     end
