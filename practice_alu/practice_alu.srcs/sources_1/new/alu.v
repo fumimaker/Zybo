@@ -22,10 +22,10 @@
 
 module alu(
     input RST, CLK,
-    input [7:0] a,
-    input [7:0] b,
+    input [3:0] a,
+    input [3:0] b,
     input [2:0] s,
-    output reg [8:0] y
+    output reg [4:0] y
     );
     
     always @(posedge CLK)

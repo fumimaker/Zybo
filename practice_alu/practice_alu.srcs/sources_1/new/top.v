@@ -1,0 +1,40 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 2019/07/17 21:09:53
+// Design Name: 
+// Module Name: top
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module top(
+    input CLK, RST,
+    input [3:0] a, b,
+    input [2:0] s,
+    output reg [3:0] y
+    );
+    
+    alu alu_instance(
+    .CLK(CLK),
+    .RST(RST),
+    .a(a),
+    .b(b),
+    .s(s),
+    .y(y)
+    );
+    
+    
+endmodule
