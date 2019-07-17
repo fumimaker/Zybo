@@ -25,7 +25,7 @@ module alu(
     input [3:0] a,
     input [3:0] b,
     input [2:0] s,
-    output reg [4:0] y
+    output reg [3:0] y
     );
     
     always @(posedge CLK)

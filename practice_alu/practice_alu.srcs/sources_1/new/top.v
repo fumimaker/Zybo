@@ -27,7 +27,7 @@ module top(
     input       [3:0] SW,
     input       [3:0] BTN,
     output reg  [3:0] LED,
-    input  [3:0] y
+    input       [3:0] y
     );
     
     alu alu_instance(
