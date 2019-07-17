@@ -1,0 +1,5 @@
+set_property SRC_FILE_INFO {cfile:C:/Users/fumi/Zybo/practice_alu/practice_alu.srcs/constrs_1/imports/Zybo/Zybo_constraints.xdc rfile:../../../practice_alu.srcs/constrs_1/imports/Zybo/Zybo_constraints.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:6 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN L16 [get_ports {CLK}]
+set_property src_info {type:XDC file:1 line:12 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN Y16 [get_ports {RST}]

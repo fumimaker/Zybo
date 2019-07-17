@@ -32,7 +32,7 @@ module alu(
     begin
         if(RST) y <= 0;
         else begin
-           assign y =   s==3'b000 ? a :
+                  y =   s==3'b000 ? a :
                         s==3'b001 ? b :
                         s==3'b010 ? a&b :
                         s==3'b011 ? a|b :
