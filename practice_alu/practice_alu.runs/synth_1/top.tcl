@@ -30,7 +30,10 @@ set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:zybo-z7-10:part0:1.0 [current_project]
 set_property ip_output_repo c:/Users/fumi/Zybo/practice_alu/practice_alu.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_verilog -library xil_defaultlib C:/Users/fumi/Zybo/practice_alu/practice_alu.srcs/sources_1/new/alu.v
+read_verilog -library xil_defaultlib {
+  C:/Users/fumi/Zybo/practice_alu/practice_alu.srcs/sources_1/new/alu.v
+  C:/Users/fumi/Zybo/practice_alu/practice_alu.srcs/sources_1/new/top.v
+}
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be
@@ -45,12 +48,12 @@ set_property used_in_implementation false [get_files C:/Users/fumi/Zybo/practice
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
-synth_design -top alu -part xc7z010clg400-1
+synth_design -top top -part xc7z010clg400-1
 
 
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef alu.dcp
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file alu_utilization_synth.rpt -pb alu_utilization_synth.pb"
+write_checkpoint -force -noxdef top.dcp
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb"
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]

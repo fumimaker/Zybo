@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log alu.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source alu.tcl
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 
 
 ****** Vivado v2018.3 (64-bit)
@@ -8,20 +8,24 @@
   **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
-source alu.tcl -notrace
-Command: synth_design -top alu -part xc7z010clg400-1
+source top.tcl -notrace
+Command: synth_design -top top -part xc7z010clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 4212 
+INFO: Helper process launched with PID 6636 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 380.230 ; gain = 99.676
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 379.969 ; gain = 99.742
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/fumi/Zybo/practice_alu/practice_alu.srcs/sources_1/new/top.v:23]
 INFO: [Synth 8-6157] synthesizing module 'alu' [C:/Users/fumi/Zybo/practice_alu/practice_alu.srcs/sources_1/new/alu.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'alu' (1#1) [C:/Users/fumi/Zybo/practice_alu/practice_alu.srcs/sources_1/new/alu.v:23]
+WARNING: [Synth 8-689] width (4) of port connection 'y' does not match port width (5) of module 'alu' [C:/Users/fumi/Zybo/practice_alu/practice_alu.srcs/sources_1/new/top.v:39]
+WARNING: [Synth 8-6104] Input port 'y' has an internal driver [C:/Users/fumi/Zybo/practice_alu/practice_alu.srcs/sources_1/new/top.v:39]
+INFO: [Synth 8-6155] done synthesizing module 'top' (2#1) [C:/Users/fumi/Zybo/practice_alu/practice_alu.srcs/sources_1/new/top.v:23]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 436.719 ; gain = 156.164
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 436.738 ; gain = 156.512
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -34,10 +38,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 436.719 ; gain = 156.164
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 436.738 ; gain = 156.512
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 436.719 ; gain = 156.164
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 436.738 ; gain = 156.512
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -46,36 +50,36 @@ Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [C:/Users/fumi/Zybo/practice_alu/practice_alu.srcs/constrs_1/imports/Zybo/Zybo_constraints.xdc]
 Finished Parsing XDC File [C:/Users/fumi/Zybo/practice_alu/practice_alu.srcs/constrs_1/imports/Zybo/Zybo_constraints.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/fumi/Zybo/practice_alu/practice_alu.srcs/constrs_1/imports/Zybo/Zybo_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/alu_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/alu_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 748.715 ; gain = 0.000
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/fumi/Zybo/practice_alu/practice_alu.srcs/constrs_1/imports/Zybo/Zybo_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 766.262 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 748.715 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 766.262 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 748.715 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 748.715 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 766.262 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 766.262 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 748.715 ; gain = 468.160
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 766.262 ; gain = 486.035
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 748.715 ; gain = 468.160
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 766.262 ; gain = 486.035
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 748.715 ; gain = 468.160
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 766.262 ; gain = 486.035
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/fumi/Zybo/practice_alu/practice_alu.srcs/sources_1/new/alu.v:41]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 748.715 ; gain = 468.160
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 766.262 ; gain = 486.035
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -88,12 +92,14 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   3 Input      9 Bit       Adders := 1     
+	   3 Input      5 Bit       Adders := 1     
 +---Registers : 
-	                9 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
 +---Muxes : 
-	   4 Input      9 Bit        Muxes := 1     
-	   2 Input      9 Bit        Muxes := 1     
+	   4 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -102,15 +108,20 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
+Module top 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
 Module alu 
 Detailed RTL Component Info : 
 +---Adders : 
-	   3 Input      9 Bit       Adders := 1     
+	   3 Input      5 Bit       Adders := 1     
 +---Registers : 
-	                9 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
 +---Muxes : 
-	   4 Input      9 Bit        Muxes := 1     
-	   2 Input      9 Bit        Muxes := 1     
+	   4 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
@@ -128,9 +139,12 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-5544] ROM "p_0_out" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "alu_instance/" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-3886] merging instance 's_reg[0]' (FDSE) to 's_reg[1]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_reg[2] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 748.715 ; gain = 468.160
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 766.262 ; gain = 486.035
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -142,13 +156,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 766.184 ; gain = 485.629
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 766.262 ; gain = 486.035
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 766.332 ; gain = 485.777
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 787.234 ; gain = 507.008
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -160,7 +174,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 775.938 ; gain = 495.383
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 787.234 ; gain = 507.008
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -184,20 +198,28 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 775.938 ; gain = 495.383
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 787.234 ; gain = 507.008
 ---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin y_IBUF[3] with 1st driver pin 'y_IBUF[3]_inst/O' [C:/Users/fumi/Zybo/practice_alu/practice_alu.srcs/sources_1/new/top.v:23]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin y_IBUF[3] with 2nd driver pin 'alu_instance/y_reg[3]/Q' [C:/Users/fumi/Zybo/practice_alu/practice_alu.srcs/sources_1/new/alu.v:33]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin y_IBUF[2] with 1st driver pin 'y_IBUF[2]_inst/O' [C:/Users/fumi/Zybo/practice_alu/practice_alu.srcs/sources_1/new/top.v:23]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin y_IBUF[2] with 2nd driver pin 'alu_instance/y_reg[2]/Q' [C:/Users/fumi/Zybo/practice_alu/practice_alu.srcs/sources_1/new/alu.v:33]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin y_IBUF[1] with 1st driver pin 'y_IBUF[1]_inst/O' [C:/Users/fumi/Zybo/practice_alu/practice_alu.srcs/sources_1/new/top.v:23]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin y_IBUF[1] with 2nd driver pin 'alu_instance/y_reg[1]/Q' [C:/Users/fumi/Zybo/practice_alu/practice_alu.srcs/sources_1/new/alu.v:33]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin y_IBUF[0] with 1st driver pin 'y_IBUF[0]_inst/O' [C:/Users/fumi/Zybo/practice_alu/practice_alu.srcs/sources_1/new/top.v:23]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin y_IBUF[0] with 2nd driver pin 'alu_instance/y_reg[0]/Q' [C:/Users/fumi/Zybo/practice_alu/practice_alu.srcs/sources_1/new/alu.v:33]
 
 Report Check Netlist: 
 +------+------------------+-------+---------+-------+------------------+
 |      |Item              |Errors |Warnings |Status |Description       |
 +------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
+|1     |multi_driven_nets |      0|        4|Failed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 775.938 ; gain = 495.383
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 787.234 ; gain = 507.008
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -209,25 +231,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 775.938 ; gain = 495.383
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 787.234 ; gain = 507.008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 775.938 ; gain = 495.383
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 787.234 ; gain = 507.008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 775.938 ; gain = 495.383
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 787.234 ; gain = 507.008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 775.938 ; gain = 495.383
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 787.234 ; gain = 507.008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -240,50 +262,44 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-------+------+
-|      |Cell   |Count |
-+------+-------+------+
-|1     |BUFG   |     1|
-|2     |CARRY4 |     3|
-|3     |LUT1   |     1|
-|4     |LUT2   |     1|
-|5     |LUT3   |     4|
-|6     |LUT4   |     8|
-|7     |LUT5   |     8|
-|8     |LUT6   |     8|
-|9     |FDRE   |     9|
-|10    |IBUF   |    21|
-|11    |OBUF   |     9|
-+------+-------+------+
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT1 |     1|
+|3     |LUT2 |     4|
+|4     |FDRE |    16|
+|5     |IBUF |    14|
+|6     |OBUF |    15|
++------+-----+------+
 
 Report Instance Areas: 
-+------+---------+-------+------+
-|      |Instance |Module |Cells |
-+------+---------+-------+------+
-|1     |top      |       |    73|
-+------+---------+-------+------+
++------+---------------+-------+------+
+|      |Instance       |Module |Cells |
++------+---------------+-------+------+
+|1     |top            |       |    51|
+|2     |  alu_instance |alu    |     8|
++------+---------------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 775.938 ; gain = 495.383
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 787.234 ; gain = 507.008
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 775.938 ; gain = 183.387
-Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 775.938 ; gain = 495.383
+Synthesis finished with 0 errors, 8 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 787.234 ; gain = 177.484
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 787.234 ; gain = 507.008
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 788.953 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 787.234 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-16 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+19 Infos, 2 Warnings, 8 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 788.953 ; gain = 520.973
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 788.953 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 787.234 ; gain = 518.891
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 787.234 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/fumi/Zybo/practice_alu/practice_alu.runs/synth_1/alu.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file alu_utilization_synth.rpt -pb alu_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Jul 17 20:38:56 2019...
+INFO: [Common 17-1381] The checkpoint 'C:/Users/fumi/Zybo/practice_alu/practice_alu.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Jul 17 22:31:58 2019...
