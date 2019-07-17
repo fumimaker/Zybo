@@ -3,7 +3,6 @@
 module alu_sim();
 localparam STEP = 8;
 reg CLK;
-reg RST;
 reg [3:0] a,b;
 reg [2:0] s;
 wire [3:0] y;
@@ -13,8 +12,8 @@ alu alu_1(
     .b(b),
     .s(s),
     .y(y),
-    .CLK(CLK),
-    .RST(RST)
+    .CLK(CLK)
+
 );
 
 always begin
@@ -25,13 +24,10 @@ always begin
 end
 
 initial begin
-    RST <= 1;
-    #STEP
-    RST <= 0;
     #STEP
     s <= 3'b011;
-    a <= 4'd10;
-    b <= 4'd20;
+    a <= 3'd5;
+    b <= 3'd3;
     #STEP
     $finish;
 end

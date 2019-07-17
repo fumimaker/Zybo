@@ -21,7 +21,7 @@
 
 
 module alu(
-    input RST, CLK,
+    input CLK,
     input [3:0] a,
     input [3:0] b,
     input [2:0] s,
@@ -30,16 +30,15 @@ module alu(
     
     always @(posedge CLK)
     begin
-        if(RST) y <= 0;
-        else begin
-                  y =   s==3'b000 ? a :
-                        s==3'b001 ? b :
-                        s==3'b010 ? a&b :
-                        s==3'b011 ? a|b :
-                        s==3'b100 ? a<<1 :
-                        s==3'b101 ? a>>1 :
-                        s==3'b110 ? a+b : a-b;
-                        
-        end
+
+
+          y =   s==3'b000 ? a :
+                s==3'b001 ? b :
+                s==3'b010 ? a&b :
+                s==3'b011 ? a|b :
+                s==3'b100 ? a<<1 :
+                s==3'b101 ? a>>1 :
+                s==3'b110 ? a+b : a-b;
+
     end
 endmodule

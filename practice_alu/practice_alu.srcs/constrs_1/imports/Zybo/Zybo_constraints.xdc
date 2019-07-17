@@ -9,8 +9,8 @@ create_clock -period 8.000 -name sys_clk_pin \
     -waveform {0.000 4.000} -add [get_ports {CLK}]
 
 #Reset
-set_property PACKAGE_PIN Y16 [get_ports {RST}]
-set_property IOSTANDARD LVCMOS33 [get_ports {RST}]
+#set_property PACKAGE_PIN Y15 [get_ports {RST}]
+#set_property IOSTANDARD LVCMOS33 [get_ports {RST}]
 
 ##LEDs
 set_property PACKAGE_PIN M14 [get_ports {LED[0]}]
