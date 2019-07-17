@@ -21,7 +21,7 @@
 
 
 module top(
-    input CLK, RST,
+    input CLK,
     output reg  [3:0] a, b,
     output reg  [2:0] s,
     input       [3:0] SW,
@@ -32,7 +32,6 @@ module top(
     
     alu alu_instance(
     .CLK(CLK),
-    .RST(RST),
     .a(a),
     .b(b),
     .s(s),
@@ -40,12 +39,10 @@ module top(
     );
     
     always @(posedge CLK) begin
-    if(!RST) begin
-        a <= BTN;
-        b <= SW;
-        s <= 3'b011; //OR
-        LED <= y;
-        end
+    a <= BTN;
+    b <= SW;
+    s <= 3'b011; //OR
+    LED <= y;
     end
     
 endmodule
