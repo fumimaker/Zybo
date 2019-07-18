@@ -60,8 +60,8 @@ initial begin
     $stop;
 end
 `include "vga_param.vh"
-wire fileouten = (HFRONT + HWIDTH + HBACK <= pattern.syncgen.HCNT) &&
-                 (VFRONT + VWIDTH + VBACK <= pattern.syncgen.VCNT);
+wire fileouten = (HFRONT + HWIDTH + HBACK <= gradation.syncgen.HCNT) &&
+                 (VFRONT + VWIDTH + VBACK <= gradation.syncgen.VCNT);
 
 always @(posedge gradation.PCK) begin
     if ( fileouten ) begin

@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../practice_VGA.srcs/sources_1/imports/HDL" --include "//Mac/Home/Downloads/XilinxFPGA/Zybo/dai2-3sho/gradation/HDL" \
+"../../../../practice_VGA.srcs/sources_1/imports/HDL/gradation.v" \
+"../../../../practice_VGA.srcs/sources_1/imports/HDL/pckgen.v" \
+"../../../../practice_VGA.srcs/sources_1/imports/HDL/syncgen.v" \
+"../../../../practice_VGA.srcs/sim_1/new/gradation_sim.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
