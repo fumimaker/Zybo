@@ -22,27 +22,16 @@
 
 module top(
     input CLK,
-    output reg  [3:0] a, b,
-    output reg  [2:0] s,
     input       [3:0] SW,
     input       [3:0] BTN,
-    output reg  [3:0] LED,
-    input       [3:0] y
+    output reg  [3:0] LED
     );
     
     alu alu_instance(
     .CLK(CLK),
-    .a(a),
-    .b(b),
-    .s(s),
-    .y(y)
+    .a(BTN),
+    .b(SW),
+    .s(3'b011),
+    .y(LED)
     );
-    
-    always @(posedge CLK) begin
-    a <= BTN;
-    b <= SW;
-    s <= 3'b011; //OR
-    LED <= y;
-    end
-    
 endmodule
