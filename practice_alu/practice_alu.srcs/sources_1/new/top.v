@@ -21,10 +21,10 @@
 
 
 module top(
-    input CLK,
-    input       [3:0] SW,
-    input       [3:0] BTN,
-    output reg  [3:0] LED
+    input wire CLK,
+    input wire [3:0] SW,
+    input wire [3:0] BTN,
+    output wire [3:0] LED
     );
     
     alu alu_instance(
