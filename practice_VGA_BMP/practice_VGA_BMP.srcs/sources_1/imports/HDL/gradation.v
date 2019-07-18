@@ -41,6 +41,8 @@ wire [9:0] vcounter = (VCNT-VBLANK)/VSIZE;
 
 reg [3:0] R, G, B;
 always @* begin
+
+/*
     case ( vcounter )
         3'd0:   begin R = pattern; G = pattern; B = pattern; end
         3'd1:   begin R = pattern; G = 4'd0;    B = 4'd0;    end
@@ -48,6 +50,7 @@ always @* begin
         3'd3:   begin R = 4'd0;    G = 4'd0;    B = pattern; end
         default:begin R = 4'd0;    G = 4'd0;    B = 4'd0;    end
     endcase
+    */
 end
 
 always @( posedge PCK ) begin
