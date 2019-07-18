@@ -31,7 +31,7 @@ module top(
     .CLK(CLK),
     .a(BTN),
     .b(SW),
-    .s(3'b011),
+    .s(3'b010),
     .y(LED)
     );
 endmodule
