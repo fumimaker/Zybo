@@ -2,3 +2,6 @@ Running: xsim.dir/gradation_sim_behav/xsimk.exe -simmode gui -wdb gradation_sim_
 Design successfully loaded
 Design Loading Memory Usage: 5888 KB (Peak: 5888 KB)
 Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 15068 KB (Peak: 15068 KB)
+Simulation CPU Usage: 77780 ms
