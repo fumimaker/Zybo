@@ -6,9 +6,9 @@ module vga_bmp(
     output  reg  [2:0]  VGA_G,
     output  reg  [2:0]  VGA_B,
     output              VGA_HS,
-    output              VGA_VS,
-    output  reg  [16:0] addr,
-    input        [8:0]  data
+    output              VGA_VS
+//    output  reg  [16:0] addr,
+//    input        [8:0]  data
 );
 
 
@@ -20,6 +20,9 @@ localparam VSIZE = 10'd120;
 
 wire            PCK;
 wire    [9:0]   HCNT, VCNT;
+
+wire [8:0] data;
+reg [16:0] addr;
 
 syncgen syncgen(
     .CLK    (CLK),
@@ -39,7 +42,6 @@ bmprom bmprom_instance(
 );
 
 
-
 wire [9:0] HBLANK = HFRONT + HWIDTH + HBACK;
 wire [9:0] VBLANK = VFRONT + VWIDTH + VBACK;
 
@@ -48,6 +50,8 @@ wire disp_enable = (HBLANK-10'd1 <= HCNT) && (HCNT < HPERIOD-10'd1)
 //wire [9:0] hcounter = HCNT-HBLANK+10'd1;
 //wire [3:0] pattern  = hcounter[5:2];
 //wire [9:0] vcounter = (VCNT-VBLANK)/VSIZE;
+
+
 
 reg [2:0] R, G, B;
 reg [15:0] pixelCnt = 0;
