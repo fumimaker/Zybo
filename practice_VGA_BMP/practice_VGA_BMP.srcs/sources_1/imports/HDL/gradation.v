@@ -65,9 +65,9 @@ always @(posedge PCK) begin
             R<=0;    G<=0;    B<=0;
         end
         else if(HCNT<480) begin //draw
-            EN <= 0;
+            EN <= 1;
             addr <= pixelCnt;
-            if(EN==1) begin
+            if(EN) begin
                 pixel <= data;
                 R <= pixel&9'b111000000;
                 G <= pixel&9'b000111000;
