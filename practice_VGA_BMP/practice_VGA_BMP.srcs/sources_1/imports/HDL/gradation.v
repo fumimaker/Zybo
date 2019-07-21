@@ -69,11 +69,11 @@ always @(posedge PCK) begin
             addr <= pixelCnt;
             if(EN) begin
                 pixel <= data;
-                R <= pixel&9'b111000000;
-                G <= pixel&9'b000111000;
-                B <= pixel&9'b000000111;
+                R <= (pixel&9'b111000000)<<6;
+                G <= (pixel&9'b000111000)<<3;
+                B <= (pixel&9'b000000111)<<0;
                 EN <= 0;
-                pixelCnt <= pixelCnt + 9;
+                pixelCnt <= pixelCnt + 10'h9;
             end
         end
         else if(HCNT<640)begin
