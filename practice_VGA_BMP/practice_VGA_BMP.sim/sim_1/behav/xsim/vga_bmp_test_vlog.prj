@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../practice_VGA_BMP.srcs/sources_1/imports/HDL" \
+"../../../../practice_VGA_BMP.srcs/sources_1/new/bmprom.v" \
+"../../../../practice_VGA_BMP.srcs/sources_1/imports/HDL/gradation.v" \
+"../../../../practice_VGA_BMP.srcs/sources_1/imports/HDL/pckgen.v" \
+"../../../../practice_VGA_BMP.srcs/sources_1/imports/HDL/syncgen.v" \
+"../../../../practice_VGA_BMP.srcs/sim_1/imports/SIM/gradation_test.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

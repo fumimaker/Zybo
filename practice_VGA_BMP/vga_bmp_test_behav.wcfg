@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="vga_bmp_test_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="vga_bmp_test" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="999980633fs"></ZoomStartTime>
+      <ZoomEndTime time="1000003874fs"></ZoomEndTime>
+      <Cursor1Time time="1000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="214"></NameColumnWidth>
+      <ValueColumnWidth column_width="232"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="22" />
+   <wvobject fp_name="/vga_bmp_test/CLK" type="logic">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_bmp_test/RST" type="logic">
+      <obj_property name="ElementShortName">RST</obj_property>
+      <obj_property name="ObjectShortName">RST</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_bmp_test/VGA_R" type="array">
+      <obj_property name="ElementShortName">VGA_R[2:0]</obj_property>
+      <obj_property name="ObjectShortName">VGA_R[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_bmp_test/VGA_G" type="array">
+      <obj_property name="ElementShortName">VGA_G[2:0]</obj_property>
+      <obj_property name="ObjectShortName">VGA_G[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_bmp_test/VGA_B" type="array">
+      <obj_property name="ElementShortName">VGA_B[2:0]</obj_property>
+      <obj_property name="ObjectShortName">VGA_B[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_bmp_test/VGA_HS" type="logic">
+      <obj_property name="ElementShortName">VGA_HS</obj_property>
+      <obj_property name="ObjectShortName">VGA_HS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_bmp_test/VGA_VS" type="logic">
+      <obj_property name="ElementShortName">VGA_VS</obj_property>
+      <obj_property name="ObjectShortName">VGA_VS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_bmp_test/fd" type="array">
+      <obj_property name="ElementShortName">fd[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fd[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_bmp_test/fileouten" type="logic">
+      <obj_property name="ElementShortName">fileouten</obj_property>
+      <obj_property name="ObjectShortName">fileouten</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_bmp_test/STEP" type="array">
+      <obj_property name="ElementShortName">STEP[31:0]</obj_property>
+      <obj_property name="ObjectShortName">STEP[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_bmp_test/CLKNUM" type="array">
+      <obj_property name="ElementShortName">CLKNUM[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CLKNUM[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_bmp_test/vga_bmp_inst/bmprom_instance/EN" type="logic">
+      <obj_property name="ElementShortName">EN</obj_property>
+      <obj_property name="ObjectShortName">EN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_bmp_test/vga_bmp_inst/bmprom_instance/addr" type="array">
+      <obj_property name="ElementShortName">addr[16:0]</obj_property>
+      <obj_property name="ObjectShortName">addr[16:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_bmp_test/vga_bmp_inst/bmprom_instance/data" type="array">
+      <obj_property name="ElementShortName">data[8:0]</obj_property>
+      <obj_property name="ObjectShortName">data[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_bmp_test/vga_bmp_inst/syncgen/HCNT" type="array">
+      <obj_property name="ElementShortName">HCNT[9:0]</obj_property>
+      <obj_property name="ObjectShortName">HCNT[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_bmp_test/vga_bmp_inst/syncgen/VCNT" type="array">
+      <obj_property name="ElementShortName">VCNT[9:0]</obj_property>
+      <obj_property name="ObjectShortName">VCNT[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_bmp_test/vga_bmp_inst/syncgen/PCK" type="logic">
+      <obj_property name="ElementShortName">PCK</obj_property>
+      <obj_property name="ObjectShortName">PCK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_bmp_test/vga_bmp_inst/R" type="array">
+      <obj_property name="ElementShortName">R[2:0]</obj_property>
+      <obj_property name="ObjectShortName">R[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_bmp_test/vga_bmp_inst/G" type="array">
+      <obj_property name="ElementShortName">G[2:0]</obj_property>
+      <obj_property name="ObjectShortName">G[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_bmp_test/vga_bmp_inst/B" type="array">
+      <obj_property name="ElementShortName">B[2:0]</obj_property>
+      <obj_property name="ObjectShortName">B[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_bmp_test/vga_bmp_inst/pixelCnt" type="array">
+      <obj_property name="ElementShortName">pixelCnt[15:0]</obj_property>
+      <obj_property name="ObjectShortName">pixelCnt[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_bmp_test/vga_bmp_inst/pixel" type="array">
+      <obj_property name="ElementShortName">pixel[8:0]</obj_property>
+      <obj_property name="ObjectShortName">pixel[8:0]</obj_property>
+   </wvobject>
+</wave_config>

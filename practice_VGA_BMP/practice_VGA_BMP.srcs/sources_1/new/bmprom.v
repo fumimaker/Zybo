@@ -23,6 +23,7 @@
 module bmprom(
     input CLK,
     input RST,
+    input EN,
     input [16:0] addr, //9bit=512
     output reg [8:0] data // 1pixel=9bit
 );
@@ -39,7 +40,7 @@ initial begin
 end
 
 always @(posedge CLK) begin
-    if(!RST)
+    if(EN)
         data <= rom[addr];
     end
     

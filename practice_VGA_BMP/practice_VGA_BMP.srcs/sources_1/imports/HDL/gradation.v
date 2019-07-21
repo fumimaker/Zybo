@@ -7,8 +7,6 @@ module vga_bmp(
     output  reg  [2:0]  VGA_B,
     output              VGA_HS,
     output              VGA_VS
-//    output  reg  [16:0] addr,
-//    input        [8:0]  data
 );
 
 
@@ -20,6 +18,7 @@ localparam VSIZE = 10'd120;
 
 wire            PCK;
 wire    [9:0]   HCNT, VCNT;
+reg             EN;
 
 wire [8:0] data;
 reg [16:0] addr;
@@ -66,12 +65,16 @@ always @(posedge PCK) begin
             R<=0;    G<=0;    B<=0;
         end
         else if(HCNT<480) begin //draw
-            addr = pixelCnt;
-            pixel = data;
-            R <= pixel&9'b111000000;
-            G <= pixel&9'b000111000;
-            B <= pixel&9'b000000111;
-            pixelCnt <= pixelCnt + 9;
+            EN <= 0;
+            addr <= pixelCnt;
+            if(EN==1) begin
+                pixel <= data;
+                R <= pixel&9'b111000000;
+                G <= pixel&9'b000111000;
+                B <= pixel&9'b000000111;
+                EN <= 0;
+                pixelCnt <= pixelCnt + 9;
+            end
         end
         else if(HCNT<640)begin
             R<=0;    G<=0;    B<=0;
