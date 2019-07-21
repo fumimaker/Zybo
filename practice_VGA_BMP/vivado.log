@@ -31,3 +31,10 @@ launch_runs impl_1 -to_step write_bitstream -jobs 12
 Run output will be captured here: C:/Users/fumi/Zybo/practice_VGA_BMP/practice_VGA_BMP.runs/synth_1/runme.log
 [Sun Jul 21 14:38:23 2019] Launched impl_1...
 Run output will be captured here: C:/Users/fumi/Zybo/practice_VGA_BMP/practice_VGA_BMP.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+[Sun Jul 21 14:45:13 2019] Launched synth_1...
+Run output will be captured here: C:/Users/fumi/Zybo/practice_VGA_BMP/practice_VGA_BMP.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 12
+[Sun Jul 21 14:45:59 2019] Launched impl_1...
+Run output will be captured here: C:/Users/fumi/Zybo/practice_VGA_BMP/practice_VGA_BMP.runs/impl_1/runme.log

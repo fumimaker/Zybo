@@ -150,21 +150,3 @@ if {$rc} {
   unset ACTIVE_STEP 
 }
 
-start_step write_bitstream
-set ACTIVE_STEP write_bitstream
-set rc [catch {
-  create_msg_db write_bitstream.pb
-  catch { write_mem_info -force vga_bmp.mmi }
-  write_bitstream -force vga_bmp.bit 
-  catch {write_debug_probes -quiet -force vga_bmp}
-  catch {file copy -force vga_bmp.ltx debug_nets.ltx}
-  close_msg_db -file write_bitstream.pb
-} RESULT]
-if {$rc} {
-  step_failed write_bitstream
-  return -code error $RESULT
-} else {
-  end_step write_bitstream
-  unset ACTIVE_STEP 
-}
-

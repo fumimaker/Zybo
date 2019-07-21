@@ -52,6 +52,7 @@ wire disp_enable = (HBLANK-10'd1 <= HCNT) && (HCNT < HPERIOD-10'd1)
 reg [2:0] R, G, B;
 reg [15:0] pixelCnt = 0;
 reg [8:0] pixel;
+
 always @(posedge PCK) begin
     if (VCNT<120) begin
         R<=0;    G<=0;    B<=0;
@@ -74,6 +75,7 @@ always @(posedge PCK) begin
     end
     else if(VCNT<480) begin
         R<=0;    G<=0;    B<=0;
+        pixelCnt <= 0;
     end
 /*
     case ( vcounter )
@@ -88,11 +90,11 @@ end
 
 always @( posedge PCK ) begin
     if ( RST )
-        {VGA_R, VGA_G, VGA_B} <= 16'h0000;
+        {VGA_R, VGA_G, VGA_B} <= 9'h000;
     else if ( disp_enable )
         {VGA_R, VGA_G, VGA_B} <= {R, G, B};
     else
-        {VGA_R, VGA_G, VGA_B} <= 16'h0000;
+        {VGA_R, VGA_G, VGA_B} <= 9'h000;
 end
 
 endmodule
