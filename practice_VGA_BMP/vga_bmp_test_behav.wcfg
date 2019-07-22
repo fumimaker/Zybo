@@ -11,15 +11,18 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="3850444066667fs"></ZoomStartTime>
-      <ZoomEndTime time="3851009666668fs"></ZoomEndTime>
-      <Cursor1Time time="3850492000000fs"></Cursor1Time>
+      <ZoomStartTime time="3849337456800fs"></ZoomStartTime>
+      <ZoomEndTime time="3857387456801fs"></ZoomEndTime>
+      <Cursor1Time time="3851443000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="214"></NameColumnWidth>
-      <ValueColumnWidth column_width="208"></ValueColumnWidth>
+      <ValueColumnWidth column_width="200"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="23" />
+   <wave_markers>
+      <marker time="6762797667000" label="" />
+   </wave_markers>
    <wvobject fp_name="/vga_bmp_test/CLK" type="logic">
       <obj_property name="ElementShortName">CLK</obj_property>
       <obj_property name="ObjectShortName">CLK</obj_property>

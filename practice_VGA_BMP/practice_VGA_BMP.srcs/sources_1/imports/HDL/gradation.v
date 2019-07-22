@@ -73,7 +73,7 @@ always @(posedge PCK) begin
                 R <= pixel[8:6];
                 G <= pixel[5:3];
                 B <= pixel[2:0];
-                pixelCnt <= pixelCnt + 10'h9;
+                pixelCnt <= pixelCnt + 10'h1;
             end
         end
         else if(HCNT<640)begin
@@ -82,7 +82,6 @@ always @(posedge PCK) begin
     end
     else if(VCNT<480) begin
         R<=0;    G<=0;    B<=0;
-        pixelCnt <= 0;
     end
 /*
     case ( vcounter )
