@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Jul 22 20:45:16 2019
+# Process ID: 3676
+# Current directory: C:/Users/fumi/Zybo/practice_VGA_BMP
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11780 C:\Users\fumi\Zybo\practice_VGA_BMP\practice_VGA_BMP.xpr
+# Log file: C:/Users/fumi/Zybo/practice_VGA_BMP/vivado.log
+# Journal file: C:/Users/fumi/Zybo/practice_VGA_BMP\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/fumi/Zybo/practice_VGA_BMP/practice_VGA_BMP.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:07 . Memory (MB): peak = 741.477 ; gain = 142.746
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Jul 22 20:46:22 2019...
