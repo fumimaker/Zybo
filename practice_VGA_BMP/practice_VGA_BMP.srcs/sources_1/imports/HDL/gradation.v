@@ -18,7 +18,7 @@ localparam VSIZE = 10'd120;
 
 wire            PCK;
 wire    [9:0]   HCNT, VCNT;
-reg             EN;
+reg             EN = 1;
 
 wire [8:0] data;
 reg [16:0] addr;
@@ -38,7 +38,7 @@ bmprom bmprom_instance(
     .RST    (RST),
     .data   (data),
     .addr   (addr),
-    .EN     (1'b1)
+    .EN     (EN)
 );
 
 
@@ -67,15 +67,13 @@ always @(posedge PCK) begin
             R<=0;    G<=0;    B<=0;
         end
         else if(HCNT<480) begin //draw
-            
             addr <= pixelCnt;
-            if(EN&&prev!=HCNT) begin
+            if(EN) begin
                 pixel <= data;
                 R <= pixel[8:6];
                 G <= pixel[5:3];
                 B <= pixel[2:0];
                 
-                prev <= HCNT;
                 pixelCnt <= pixelCnt + 10'h9;
             end
         end
