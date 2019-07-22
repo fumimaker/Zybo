@@ -37,7 +37,8 @@ bmprom bmprom_instance(
     .CLK    (CLK),
     .RST    (RST),
     .data   (data),
-    .addr   (addr)
+    .addr   (addr),
+    .EN     (EN)
 );
 
 
@@ -59,6 +60,7 @@ reg [8:0] pixel;
 always @(posedge PCK) begin
     if (VCNT<120) begin
         R<=0;    G<=0;    B<=0;
+        EN<=0;
     end
     else if(VCNT<360) begin
         if(HCNT<160) begin
@@ -69,9 +71,14 @@ always @(posedge PCK) begin
             addr <= pixelCnt;
             if(EN) begin
                 pixel <= data;
-                R <= (pixel&9'b111000000)<<6;
-                G <= (pixel&9'b000111000)<<3;
-                B <= (pixel&9'b000000111)<<0;
+                /*
+                R <= (pixel&9'b111000000)>>6;
+                G <= (pixel&9'b000111000)>>3;
+                B <= (pixel&9'b000000111)>>0;
+                */
+                R <= pixel[8:6];
+                G <= pixel[5:3];
+                B <= pixel[2:0];
                 EN <= 0;
                 pixelCnt <= pixelCnt + 10'h9;
             end
