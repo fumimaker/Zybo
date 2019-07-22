@@ -38,7 +38,7 @@ bmprom bmprom_instance(
     .RST    (RST),
     .data   (data),
     .addr   (addr),
-    .EN     (EN)
+    .EN     (1'b1)
 );
 
 
@@ -60,21 +60,21 @@ reg [8:0] pixel;
 always @(posedge PCK) begin
     if (VCNT<120) begin
         R<=0;    G<=0;    B<=0;
-        EN<=0;
+        
     end
     else if(VCNT<360) begin
         if(HCNT<160) begin
             R<=0;    G<=0;    B<=0;
         end
         else if(HCNT<480) begin //draw
-            EN <= 1;
+            
             addr <= pixelCnt;
             if(EN&&prev!=HCNT) begin
                 pixel <= data;
                 R <= pixel[8:6];
                 G <= pixel[5:3];
                 B <= pixel[2:0];
-                EN <= 0;
+                
                 prev <= HCNT;
                 pixelCnt <= pixelCnt + 10'h9;
             end
