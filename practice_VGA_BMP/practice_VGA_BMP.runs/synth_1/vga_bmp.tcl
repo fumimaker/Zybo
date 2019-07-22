@@ -30,7 +30,7 @@ set_property board_part digilentinc.com:zybo-z7-10:part0:1.0 [current_project]
 set_property ip_output_repo c:/Users/fumi/Zybo/practice_VGA_BMP/practice_VGA_BMP.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog C:/Users/fumi/Zybo/practice_VGA_BMP/practice_VGA_BMP.srcs/sources_1/imports/HDL/vga_param.vh
-read_mem C:/Users/fumi/Zybo/practice_VGA_BMP/practice_VGA_BMP.srcs/sources_1/imports/practice_VGA_BMP/white.mem
+read_mem C:/Users/fumi/Zybo/practice_VGA_BMP/practice_VGA_BMP.srcs/sources_1/new/white.mem
 read_verilog -library xil_defaultlib {
   C:/Users/fumi/Zybo/practice_VGA_BMP/practice_VGA_BMP.srcs/sources_1/new/bmprom.v
   C:/Users/fumi/Zybo/practice_VGA_BMP/practice_VGA_BMP.srcs/sources_1/imports/HDL/pckgen.v

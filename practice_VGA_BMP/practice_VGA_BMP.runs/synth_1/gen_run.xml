@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1563802931">
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1563804341">
   <File Type="PA-TCL" Name="vga_bmp.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="vga_bmp_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="vga_bmp_reports.tcl"/>
@@ -53,10 +53,8 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/practice_VGA_BMP/white.mem">
+    <File Path="$PSRCDIR/sources_1/new/white.mem">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/white.mem"/>
-        <Attr Name="ImportTime" Val="1563793386"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
