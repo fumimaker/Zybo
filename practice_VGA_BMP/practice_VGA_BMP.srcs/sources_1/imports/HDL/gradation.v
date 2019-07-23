@@ -2,9 +2,9 @@
 module vga_bmp(
     input               CLK,
     input               RST,
-    output  reg  [2:0]  VGA_R,
-    output  reg  [2:0]  VGA_G,
-    output  reg  [2:0]  VGA_B,
+    output  reg  [4:0]  VGA_R,
+    output  reg  [5:0]  VGA_G,
+    output  reg  [4:0]  VGA_B,
     output              VGA_HS,
     output              VGA_VS
 );
