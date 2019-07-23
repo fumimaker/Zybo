@@ -58,14 +58,16 @@ wire disp_enable = (HBLANK-10'd1 <= HCNT) && (HCNT < HPERIOD-10'd1)
 
 
 
-always @(posedge CLK) begin
+always @(posedge PCK) begin
 
     if (VCNT<120) begin
         R<=0;    G<=0;    B<=0;
+        pixelCnt <= 0;
     end
     else if(VCNT<360) begin
         if(HCNT<160) begin
             R<=0;    G<=0;    B<=0;
+            
         end
         else if(HCNT<480) begin //draw
             addr <= pixelCnt;
@@ -80,6 +82,7 @@ always @(posedge CLK) begin
         end
         else if(HCNT<640)begin
             R<=0;    G<=0;    B<=0;
+            
         end
         
         else begin
@@ -88,10 +91,11 @@ always @(posedge CLK) begin
     end
     else if(VCNT<480) begin
         R<=0;    G<=0;    B<=0;
-        
+        pixelCnt <= 0;
     end
     else begin
         R<=0;    G<=0;    B<=0;
+        pixelCnt <= 0;
     end
     
 
