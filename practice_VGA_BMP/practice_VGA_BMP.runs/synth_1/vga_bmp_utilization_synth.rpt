@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Tue Jul 23 22:22:14 2019
+| Date         : Tue Jul 23 22:39:24 2019
 | Host         : FUMI3D2B running 64-bit major release  (build 9200)
 | Command      : report_utilization -file vga_bmp_utilization_synth.rpt -pb vga_bmp_utilization_synth.pb
 | Design       : vga_bmp
@@ -149,13 +149,13 @@ Table of Contents
 +------------+------+---------------------+
 | FDRE       |  121 |        Flop & Latch |
 | RAMB36E1   |   36 |        Block Memory |
-| LUT6       |   19 |                 LUT |
-| LUT4       |   17 |                 LUT |
-| LUT5       |   12 |                 LUT |
+| LUT6       |   25 |                 LUT |
+| LUT4       |   16 |                 LUT |
 | OBUF       |   11 |                  IO |
-| LUT2       |    8 |                 LUT |
-| LUT3       |    6 |                 LUT |
+| LUT5       |    8 |                 LUT |
+| LUT2       |    6 |                 LUT |
 | CARRY4     |    5 |          CarryLogic |
+| LUT3       |    4 |                 LUT |
 | LUT1       |    3 |                 LUT |
 | IBUF       |    2 |                  IO |
 | FDSE       |    2 |        Flop & Latch |

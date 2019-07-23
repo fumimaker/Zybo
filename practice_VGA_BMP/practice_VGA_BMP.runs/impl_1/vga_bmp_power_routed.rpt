@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Tue Jul 23 22:23:15 2019
+| Date             : Tue Jul 23 22:40:25 2019
 | Host             : FUMI3D2B running 64-bit major release  (build 9200)
 | Command          : report_power -file vga_bmp_power_routed.rpt -pb vga_bmp_power_summary_routed.pb -rpx vga_bmp_power_routed.rpx
 | Design           : vga_bmp
@@ -33,7 +33,7 @@ Table of Contents
 | Total On-Chip Power (W)  | 0.220        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.124        |
+| Dynamic (W)              | 0.123        |
 | Device Static (W)        | 0.096        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 82.5         |
@@ -53,12 +53,12 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.003 |        5 |       --- |             --- |
-| Slice Logic    |    <0.001 |      222 |       --- |             --- |
+| Slice Logic    |    <0.001 |      219 |       --- |             --- |
 |   LUT as Logic |    <0.001 |       69 |     17600 |            0.39 |
 |   CARRY4       |    <0.001 |        5 |      4400 |            0.11 |
 |   Register     |    <0.001 |      125 |     35200 |            0.36 |
 |   Others       |     0.000 |       10 |       --- |             --- |
-| Signals        |    <0.001 |      218 |       --- |             --- |
+| Signals        |    <0.001 |      215 |       --- |             --- |
 | Block RAM      |     0.035 |       36 |        60 |           60.00 |
 | MMCM           |     0.085 |        1 |         2 |           50.00 |
 | I/O            |    <0.001 |       13 |       100 |           13.00 |
@@ -151,8 +151,8 @@ Table of Contents
 +-------------------+-----------+
 | Name              | Power (W) |
 +-------------------+-----------+
-| vga_bmp           |     0.124 |
-|   bmprom_instance |     0.038 |
+| vga_bmp           |     0.123 |
+|   bmprom_instance |     0.037 |
 |   syncgen         |     0.085 |
 |     pckgen        |     0.085 |
 +-------------------+-----------+
