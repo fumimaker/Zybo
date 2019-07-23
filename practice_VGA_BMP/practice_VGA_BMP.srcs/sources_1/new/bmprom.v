@@ -42,8 +42,12 @@ initial begin
 end
 
 always @(posedge CLK) begin
-    if(EN)
+    if(RST)
+        data <= 0;
+    else if(EN)
         data <= rom[addr];
-    end
+    else
+        data <= 0;
+end
     
 endmodule

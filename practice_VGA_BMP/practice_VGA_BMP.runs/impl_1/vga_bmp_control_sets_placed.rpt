@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Mon Jul 22 23:10:32 2019
+| Date         : Tue Jul 23 13:27:34 2019
 | Host         : FUMI3D2B running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file vga_bmp_control_sets_placed.rpt
 | Design       : vga_bmp
@@ -48,10 +48,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               3 |            3 |
+| No           | No                    | No                     |               3 |            2 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              19 |           10 |
-| Yes          | No                    | No                     |              91 |           32 |
+| No           | Yes                   | No                     |              19 |            9 |
+| Yes          | No                    | No                     |              91 |           41 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |              21 |           11 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -63,14 +63,14 @@ Table of Contents
 +---------------------+------------------------+--------------------------+------------------+----------------+
 |     Clock Signal    |      Enable Signal     |     Set/Reset Signal     | Slice Load Count | Bel Load Count |
 +---------------------+------------------------+--------------------------+------------------+----------------+
-|  syncgen/pckgen/PCK | syncgen/VGA_HS_i_1_n_0 | RST_IBUF                 |                1 |              1 |
 |  syncgen/pckgen/PCK | syncgen/VGA_VS         | RST_IBUF                 |                1 |              1 |
-|  CLK_IBUF_BUFG      |                        |                          |                3 |              3 |
-|  syncgen/pckgen/PCK |                        | syncgen/SR[0]            |                7 |              9 |
+|  syncgen/pckgen/PCK | syncgen/VGA_HS_i_1_n_0 | RST_IBUF                 |                1 |              1 |
+|  CLK_IBUF_BUFG      |                        |                          |                2 |              3 |
+|  syncgen/pckgen/PCK |                        | syncgen/SR[0]            |                6 |              9 |
 |  syncgen/pckgen/PCK | syncgen/E[0]           | syncgen/VCNT_reg[9]_0[0] |                6 |              9 |
 |  syncgen/pckgen/PCK |                        | syncgen/HCNT[9]_i_1_n_0  |                3 |             10 |
 |  syncgen/pckgen/PCK | syncgen/hcntend        | RST_IBUF                 |                3 |             10 |
-|  syncgen/pckgen/PCK | syncgen/addr           |                          |               32 |             91 |
+|  syncgen/pckgen/PCK | syncgen/addr           |                          |               41 |             91 |
 +---------------------+------------------------+--------------------------+------------------+----------------+
 
 

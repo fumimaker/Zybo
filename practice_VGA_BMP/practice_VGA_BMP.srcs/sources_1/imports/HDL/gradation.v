@@ -19,9 +19,13 @@ localparam VSIZE = 10'd120;
 wire            PCK;
 wire    [9:0]   HCNT, VCNT;
 reg             EN = 1;
-
 wire [8:0] data;
-reg [16:0] addr;
+reg [16:0] addr = 0;
+
+reg [2:0] R, G, B;
+reg [16:0] pixelCnt = 0, prev = 0;
+reg [8:0] pixel = 0;
+
 
 syncgen syncgen(
     .CLK    (CLK),
@@ -53,9 +57,7 @@ wire disp_enable = (HBLANK-10'd1 <= HCNT) && (HCNT < HPERIOD-10'd1)
 
 
 
-reg [2:0] R, G, B;
-reg [16:0] pixelCnt = 0, prev = 0;
-reg [8:0] pixel;
+
 
 always @(posedge PCK) begin
     if (VCNT<120) begin
