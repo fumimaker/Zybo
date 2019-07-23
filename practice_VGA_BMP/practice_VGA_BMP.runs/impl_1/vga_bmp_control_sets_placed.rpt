@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Tue Jul 23 13:27:34 2019
+| Date         : Tue Jul 23 15:43:47 2019
 | Host         : FUMI3D2B running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file vga_bmp_control_sets_placed.rpt
 | Design       : vga_bmp
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     8 |
-| Unused register locations in slices containing registers |    50 |
+| Number of unique control sets                            |     9 |
+| Unused register locations in slices containing registers |    57 |
 +----------------------------------------------------------+-------+
 
 
@@ -38,7 +38,7 @@ Table of Contents
 |      3 |            1 |
 |      9 |            2 |
 |     10 |            2 |
-|    16+ |            1 |
+|    16+ |            2 |
 +--------+--------------+
 
 
@@ -48,12 +48,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               3 |            2 |
+| No           | No                    | No                     |               3 |            3 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              19 |            9 |
-| Yes          | No                    | No                     |              91 |           41 |
+| No           | Yes                   | No                     |              19 |           10 |
+| Yes          | No                    | No                     |              92 |           17 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              21 |           11 |
+| Yes          | Yes                   | No                     |              21 |           12 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -65,12 +65,13 @@ Table of Contents
 +---------------------+------------------------+--------------------------+------------------+----------------+
 |  syncgen/pckgen/PCK | syncgen/VGA_VS         | RST_IBUF                 |                1 |              1 |
 |  syncgen/pckgen/PCK | syncgen/VGA_HS_i_1_n_0 | RST_IBUF                 |                1 |              1 |
-|  CLK_IBUF_BUFG      |                        |                          |                2 |              3 |
+|  CLK_IBUF_BUFG      |                        |                          |                3 |              3 |
 |  syncgen/pckgen/PCK |                        | syncgen/SR[0]            |                6 |              9 |
-|  syncgen/pckgen/PCK | syncgen/E[0]           | syncgen/VCNT_reg[9]_0[0] |                6 |              9 |
-|  syncgen/pckgen/PCK |                        | syncgen/HCNT[9]_i_1_n_0  |                3 |             10 |
-|  syncgen/pckgen/PCK | syncgen/hcntend        | RST_IBUF                 |                3 |             10 |
-|  syncgen/pckgen/PCK | syncgen/addr           |                          |               41 |             91 |
+|  CLK_IBUF_BUFG      | syncgen/E[0]           | syncgen/VCNT_reg[8]_0[0] |                4 |              9 |
+|  syncgen/pckgen/PCK |                        | syncgen/HCNT[9]_i_1_n_0  |                4 |             10 |
+|  syncgen/pckgen/PCK | syncgen/hcntend        | RST_IBUF                 |                6 |             10 |
+|  CLK_IBUF_BUFG      | syncgen/pixelCnt       |                          |                7 |             27 |
+|  CLK_IBUF_BUFG      | syncgen/addr           |                          |               10 |             65 |
 +---------------------+------------------------+--------------------------+------------------+----------------+
 
 
