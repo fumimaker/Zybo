@@ -1,0 +1,8 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../practice_VGA_BMP.srcs/sources_1/imports/HDL" \
+"vga_bmp_test_func_synth.v" \
+"../../../../../practice_VGA_BMP.srcs/sources_1/imports/HDL/syncgen.v" \
+"../../../../../practice_VGA_BMP.srcs/sim_1/imports/SIM/gradation_test.v" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,14 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 202aaf3b8d744fad8fb26202455cbb4e --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot vga_bmp_test_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.vga_bmp_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-3180] cannot find port 'addr' on this module [C:/Users/fumi/Zybo/practice_VGA_BMP/practice_VGA_BMP.sim/sim_1/impl/timing/xsim/vga_bmp_test_time_impl.v:10487]
+ERROR: [VRFC 10-3180] cannot find port 'VGA_VS_OBUF' on this module [C:/Users/fumi/Zybo/practice_VGA_BMP/practice_VGA_BMP.sim/sim_1/impl/timing/xsim/vga_bmp_test_time_impl.v:10486]
+ERROR: [VRFC 10-3180] cannot find port 'VGA_HS_OBUF' on this module [C:/Users/fumi/Zybo/practice_VGA_BMP/practice_VGA_BMP.sim/sim_1/impl/timing/xsim/vga_bmp_test_time_impl.v:10485]
+ERROR: [VRFC 10-3180] cannot find port 'VCNT_reg[9]_0' on this module [C:/Users/fumi/Zybo/practice_VGA_BMP/practice_VGA_BMP.sim/sim_1/impl/timing/xsim/vga_bmp_test_time_impl.v:10484]
+ERROR: [VRFC 10-3180] cannot find port 'SYSCLK' on this module [C:/Users/fumi/Zybo/practice_VGA_BMP/practice_VGA_BMP.sim/sim_1/impl/timing/xsim/vga_bmp_test_time_impl.v:10483]
+ERROR: [VRFC 10-3180] cannot find port 'SR' on this module [C:/Users/fumi/Zybo/practice_VGA_BMP/practice_VGA_BMP.sim/sim_1/impl/timing/xsim/vga_bmp_test_time_impl.v:10482]
+ERROR: [VRFC 10-3180] cannot find port 'RST_IBUF' on this module [C:/Users/fumi/Zybo/practice_VGA_BMP/practice_VGA_BMP.sim/sim_1/impl/timing/xsim/vga_bmp_test_time_impl.v:10481]
+ERROR: [VRFC 10-3180] cannot find port 'E' on this module [C:/Users/fumi/Zybo/practice_VGA_BMP/practice_VGA_BMP.sim/sim_1/impl/timing/xsim/vga_bmp_test_time_impl.v:10479]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
