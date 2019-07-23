@@ -1,6 +1,6 @@
 webtalk_init -webtalk_dir C:/Users/fumi/Zybo/pattern/pattern.sim/sim_2/behav/xsim/xsim.dir/pattern_test2_behav/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Thu Jul 18 17:31:41 2019" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Tue Jul 23 20:55:57 2019" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2018.3 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "2405991" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "WIN64" -context "software_version_and_target_device"
@@ -14,7 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "1252601d-111d-4b39-a255-e2c2e18331b0" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "c1c8f67327e6498a93ed45a1267058ce" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "5" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "7" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Microsoft Windows 8 or later , 64-bit" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "Intel(R) Core(TM) i9-8950HK CPU @ 2.90GHz" -context "user_environment"
@@ -23,11 +23,13 @@ webtalk_add_data -client project -key total_processors -value "2" -context "user
 webtalk_add_data -client project -key system_ram -value "17.000 GB" -context "user_environment"
 webtalk_register_client -client xsim
 webtalk_add_data -client xsim -key runall -value "true" -context "xsim\\command_line_options"
+webtalk_add_data -client xsim -key runall -value "true" -context "xsim\\command_line_options"
+webtalk_add_data -client xsim -key runall -value "true" -context "xsim\\command_line_options"
 webtalk_add_data -client xsim -key Command -value "xsim" -context "xsim\\command_line_options"
 webtalk_add_data -client xsim -key trace_waveform -value "true" -context "xsim\\usage"
-webtalk_add_data -client xsim -key runtime -value "17284080 ns" -context "xsim\\usage"
-webtalk_add_data -client xsim -key iteration -value "0" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Time -value "78.30_sec" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Memory -value "14548_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 329593752 -regid "" -xml C:/Users/fumi/Zybo/pattern/pattern.sim/sim_2/behav/xsim/xsim.dir/pattern_test2_behav/webtalk/usage_statistics_ext_xsim.xml -html C:/Users/fumi/Zybo/pattern/pattern.sim/sim_2/behav/xsim/xsim.dir/pattern_test2_behav/webtalk/usage_statistics_ext_xsim.html -wdm C:/Users/fumi/Zybo/pattern/pattern.sim/sim_2/behav/xsim/xsim.dir/pattern_test2_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_add_data -client xsim -key runtime -value "48578772 ns" -context "xsim\\usage"
+webtalk_add_data -client xsim -key iteration -value "1" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Simulation_Time -value "275.83_sec" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Simulation_Memory -value "14576_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 3412572370 -regid "" -xml C:/Users/fumi/Zybo/pattern/pattern.sim/sim_2/behav/xsim/xsim.dir/pattern_test2_behav/webtalk/usage_statistics_ext_xsim.xml -html C:/Users/fumi/Zybo/pattern/pattern.sim/sim_2/behav/xsim/xsim.dir/pattern_test2_behav/webtalk/usage_statistics_ext_xsim.html -wdm C:/Users/fumi/Zybo/pattern/pattern.sim/sim_2/behav/xsim/xsim.dir/pattern_test2_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate

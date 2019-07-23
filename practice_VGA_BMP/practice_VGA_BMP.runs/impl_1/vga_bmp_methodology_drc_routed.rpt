@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Tue Jul 23 15:44:05 2019
+| Date         : Tue Jul 23 21:45:26 2019
 | Host         : FUMI3D2B running 64-bit major release  (build 9200)
 | Command      : report_methodology -file vga_bmp_methodology_drc_routed.rpt -pb vga_bmp_methodology_drc_routed.pb -rpx vga_bmp_methodology_drc_routed.rpx
 | Design       : vga_bmp
@@ -35,7 +35,7 @@ Table of Contents
 -----------------
 SYNTH-6#1 Warning
 Timing of a block RAM might be sub-optimal  
-The timing for the instance bmprom_instance/data_reg_3_1, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+The timing for the instance bmprom_instance/data_reg_3_3, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 TIMING-18#1 Warning
