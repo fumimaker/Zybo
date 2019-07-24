@@ -61,16 +61,16 @@ wire [16:0] all_pixel = 320*240;
 always @(posedge PCK) begin
     if (VCNT<120) begin
         R<=0;    G<=0;    B<=0;
-        pixelCnt <= all_pixel - 0;
+        pixelCnt<= all_pixel;
     end
     if(VCNT<360 && VCNT>=120 && HCNT<160) begin
         R<=0;    G<=0;    B<=0; 
     end
     if(VCNT<360 &&  VCNT>=120 && HCNT<480 && HCNT>=160 ) begin //draw
             addr <= pixelCnt;
-            R <= data[8:6];
+            B <= data[8:6];
             G <= data[5:3];
-            B <= data[2:0];
+            R <= data[2:0];
             pixelCnt <= pixelCnt - 17'h1;
     end
     if(VCNT<360 &&  VCNT>=120 && HCNT<640 && HCNT>=480 ) begin
@@ -78,7 +78,7 @@ always @(posedge PCK) begin
     end
     if(VCNT<480 && VCNT>=360 ) begin
         R<=0;    G<=0;    B<=0;
-        pixelCnt<= all_pixel - 0;
+        pixelCnt<= all_pixel;
     end
     
 
