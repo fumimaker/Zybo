@@ -34,10 +34,10 @@ reg [8:0] rom [0:131071]; //9bit*320*240
 initial begin
 `ifdef SIMULATION
 //    $readmemh("../../../inuko9bit.raw", rom , 0, 131071);
-        $readmemh("white.mem", rom , 0, 131071);
+        $readmemh("inuko.mem", rom , 0, 131071);
 `else
 //    $readmemh("../../../inuko9bit.raw", rom , 0, 131071);
-        $readmemh("white.mem", rom , 0, 131071);
+        $readmemh("inuko.mem", rom , 0, 131071);
 `endif
 end
 

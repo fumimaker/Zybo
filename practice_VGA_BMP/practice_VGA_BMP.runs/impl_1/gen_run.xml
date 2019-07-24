@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1563965234">
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1563973218">
   <File Type="BITSTR-BMM" Name="vga_bmp_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="vga_bmp_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="vga_bmp_timing_summary_init.rpt"/>
@@ -114,6 +114,12 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/white.mem">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/inuko.mem">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
