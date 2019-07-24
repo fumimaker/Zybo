@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Wed Jul 24 22:02:31 2019
+| Date             : Wed Jul 24 23:09:17 2019
 | Host             : FUMI3D2B running 64-bit major release  (build 9200)
 | Command          : report_power -file vga_bmp_power_routed.rpt -pb vga_bmp_power_summary_routed.pb -rpx vga_bmp_power_routed.rpx
 | Design           : vga_bmp

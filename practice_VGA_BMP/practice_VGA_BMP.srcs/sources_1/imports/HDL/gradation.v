@@ -56,7 +56,7 @@ wire disp_enable = (HBLANK-10'd1 <= HCNT) && (HCNT < HPERIOD-10'd1)
 //wire [9:0] vcounter = (VCNT-VBLANK)/VSIZE;
 
 
-
+//wire [16:0] all_pixel = 320*240;
 
 always @(posedge PCK) begin
     if (VCNT<120) begin
@@ -78,7 +78,7 @@ always @(posedge PCK) begin
     end
     if(VCNT<480 && VCNT>=360 ) begin
         R<=0;    G<=0;    B<=0;
-        pixelCnt <= 0;
+        pixelCnt<= 0;
     end
     
 
