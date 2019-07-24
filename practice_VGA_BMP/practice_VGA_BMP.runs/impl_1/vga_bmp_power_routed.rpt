@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Wed Jul 24 23:09:17 2019
+| Date             : Wed Jul 24 23:23:45 2019
 | Host             : FUMI3D2B running 64-bit major release  (build 9200)
 | Command          : report_power -file vga_bmp_power_routed.rpt -pb vga_bmp_power_summary_routed.pb -rpx vga_bmp_power_routed.rpx
 | Design           : vga_bmp
@@ -53,12 +53,12 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.003 |        5 |       --- |             --- |
-| Slice Logic    |    <0.001 |      218 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       67 |     17600 |            0.38 |
+| Slice Logic    |    <0.001 |      234 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       83 |     17600 |            0.47 |
 |   CARRY4       |    <0.001 |        5 |      4400 |            0.11 |
 |   Register     |    <0.001 |      125 |     35200 |            0.36 |
 |   Others       |     0.000 |       10 |       --- |             --- |
-| Signals        |    <0.001 |      216 |       --- |             --- |
+| Signals        |    <0.001 |      217 |       --- |             --- |
 | Block RAM      |     0.035 |       36 |        60 |           60.00 |
 | MMCM           |     0.085 |        1 |         2 |           50.00 |
 | I/O            |    <0.001 |       13 |       100 |           13.00 |
@@ -73,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.039 |       0.035 |      0.005 |
+| Vccint    |       1.000 |     0.040 |       0.035 |      0.005 |
 | Vccaux    |       1.800 |     0.053 |       0.047 |      0.005 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
