@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="3849337456800fs"></ZoomStartTime>
-      <ZoomEndTime time="3857387456801fs"></ZoomEndTime>
-      <Cursor1Time time="3851443000000fs"></Cursor1Time>
+      <ZoomStartTime time="20650290000000fs"></ZoomStartTime>
+      <ZoomEndTime time="20650869600001fs"></ZoomEndTime>
+      <Cursor1Time time="20650492000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="214"></NameColumnWidth>
-      <ValueColumnWidth column_width="200"></ValueColumnWidth>
+      <ValueColumnWidth column_width="192"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="23" />
+   <WVObjectSize size="22" />
    <wave_markers>
       <marker time="6762797667000" label="" />
    </wave_markers>
@@ -50,10 +50,6 @@
    <wvobject fp_name="/vga_bmp_test/VGA_VS" type="logic">
       <obj_property name="ElementShortName">VGA_VS</obj_property>
       <obj_property name="ObjectShortName">VGA_VS</obj_property>
-   </wvobject>
-   <wvobject fp_name="/vga_bmp_test/fd" type="array">
-      <obj_property name="ElementShortName">fd[31:0]</obj_property>
-      <obj_property name="ObjectShortName">fd[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/vga_bmp_test/fileouten" type="logic">
       <obj_property name="ElementShortName">fileouten</obj_property>

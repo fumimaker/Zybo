@@ -63,24 +63,20 @@ always @(posedge PCK) begin
         R<=0;    G<=0;    B<=0;
         pixelCnt <= 0;
     end
-    else if(VCNT<360 && HCNT<160) begin
+    if(VCNT<360 && VCNT>=120 && HCNT<160) begin
         R<=0;    G<=0;    B<=0; 
     end
-    else if(VCNT<360 && HCNT<480) begin //draw
+    if(VCNT<360 &&  VCNT>=120 && HCNT<480 && HCNT>=160 ) begin //draw
             addr <= pixelCnt;
             R <= data[8:6];
             G <= data[5:3];
             B <= data[2:0];
             pixelCnt <= pixelCnt + 17'h1;
     end
-    else if(VCNT<360 && HCNT<640) begin
+    if(VCNT<360 &&  VCNT>=120 && HCNT<640 && HCNT>=480 ) begin
             R<=0;    G<=0;    B<=0;
     end
-    else if(VCNT<480) begin
-        R<=0;    G<=0;    B<=0;
-        pixelCnt <= 0;
-    end
-    else begin
+    if(VCNT<480 && VCNT>=360 ) begin
         R<=0;    G<=0;    B<=0;
         pixelCnt <= 0;
     end

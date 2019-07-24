@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Tue Jul 23 22:40:05 2019
+| Date         : Wed Jul 24 19:48:39 2019
 | Host         : FUMI3D2B running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file vga_bmp_control_sets_placed.rpt
 | Design       : vga_bmp
@@ -50,10 +50,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |               3 |            3 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              28 |           19 |
-| Yes          | No                    | No                     |              65 |           24 |
+| No           | Yes                   | No                     |              19 |            9 |
+| Yes          | No                    | No                     |              65 |           26 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              29 |           13 |
+| Yes          | Yes                   | No                     |              38 |           16 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -66,12 +66,12 @@ Table of Contents
 |  syncgen/pckgen/PCK | syncgen/VGA_HS_i_1_n_0 | RST_IBUF                 |                1 |              1 |
 |  syncgen/pckgen/PCK | syncgen/VGA_VS         | RST_IBUF                 |                1 |              1 |
 |  CLK_IBUF_BUFG      |                        |                          |                3 |              3 |
-|  syncgen/pckgen/PCK |                        | syncgen/HCNT_reg[8]_0[0] |                8 |              9 |
-|  syncgen/pckgen/PCK |                        | syncgen/SR[0]            |                7 |              9 |
-|  syncgen/pckgen/PCK |                        | syncgen/HCNT[9]_i_1_n_0  |                4 |             10 |
-|  syncgen/pckgen/PCK | syncgen/hcntend        | RST_IBUF                 |                6 |             10 |
-|  syncgen/pckgen/PCK | syncgen/pixelCnt       | syncgen/VCNT_reg[9]_0    |                5 |             17 |
-|  syncgen/pckgen/PCK | syncgen/addr           |                          |               24 |             65 |
+|  syncgen/pckgen/PCK |                        | syncgen/SR[0]            |                6 |              9 |
+|  syncgen/pckgen/PCK | syncgen/E[0]           | syncgen/VCNT_reg[7]_0[0] |                5 |              9 |
+|  syncgen/pckgen/PCK |                        | syncgen/HCNT[9]_i_1_n_0  |                3 |             10 |
+|  syncgen/pckgen/PCK | syncgen/hcntend        | RST_IBUF                 |                4 |             10 |
+|  syncgen/pckgen/PCK | syncgen/R112_out       | syncgen/VCNT_reg[4]_0    |                5 |             17 |
+|  syncgen/pckgen/PCK | syncgen/R112_out       |                          |               26 |             65 |
 +---------------------+------------------------+--------------------------+------------------+----------------+
 
 

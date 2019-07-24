@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Tue Jul 23 22:40:25 2019
+| Date             : Wed Jul 24 19:49:00 2019
 | Host             : FUMI3D2B running 64-bit major release  (build 9200)
 | Command          : report_power -file vga_bmp_power_routed.rpt -pb vga_bmp_power_summary_routed.pb -rpx vga_bmp_power_routed.rpx
 | Design           : vga_bmp
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.220        |
+| Total On-Chip Power (W)  | 0.219        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 0.123        |
@@ -53,17 +53,17 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.003 |        5 |       --- |             --- |
-| Slice Logic    |    <0.001 |      219 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       69 |     17600 |            0.39 |
+| Slice Logic    |    <0.001 |      218 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       67 |     17600 |            0.38 |
 |   CARRY4       |    <0.001 |        5 |      4400 |            0.11 |
 |   Register     |    <0.001 |      125 |     35200 |            0.36 |
 |   Others       |     0.000 |       10 |       --- |             --- |
-| Signals        |    <0.001 |      215 |       --- |             --- |
+| Signals        |    <0.001 |      216 |       --- |             --- |
 | Block RAM      |     0.035 |       36 |        60 |           60.00 |
 | MMCM           |     0.085 |        1 |         2 |           50.00 |
 | I/O            |    <0.001 |       13 |       100 |           13.00 |
 | Static Power   |     0.096 |          |           |                 |
-| Total          |     0.220 |          |           |                 |
+| Total          |     0.219 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.040 |       0.035 |      0.005 |
+| Vccint    |       1.000 |     0.039 |       0.035 |      0.005 |
 | Vccaux    |       1.800 |     0.053 |       0.047 |      0.005 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
