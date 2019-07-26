@@ -65,17 +65,15 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7z010clg400-1
-  set_property board_part digilentinc.com:zybo-z7-10:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/fumi/Zybo/practice_VGA_BMP/practice_VGA_BMP.cache/wt [current_project]
-  set_property parent.project_path C:/Users/fumi/Zybo/practice_VGA_BMP/practice_VGA_BMP.xpr [current_project]
-  set_property ip_output_repo C:/Users/fumi/Zybo/practice_VGA_BMP/practice_VGA_BMP.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/ivr/Documents/GitHub/Zybo/practice_VGA_BMP/practice_VGA_BMP.cache/wt [current_project]
+  set_property parent.project_path C:/Users/ivr/Documents/GitHub/Zybo/practice_VGA_BMP/practice_VGA_BMP.xpr [current_project]
+  set_property ip_output_repo C:/Users/ivr/Documents/GitHub/Zybo/practice_VGA_BMP/practice_VGA_BMP.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet C:/Users/fumi/Zybo/practice_VGA_BMP/practice_VGA_BMP.runs/synth_1/vga_bmp.dcp
-  read_xdc C:/Users/fumi/Zybo/practice_VGA_BMP/practice_VGA_BMP.srcs/constrs_1/imports/gradation/gradation.xdc
+  add_files -quiet C:/Users/ivr/Documents/GitHub/Zybo/practice_VGA_BMP/practice_VGA_BMP.runs/synth_1/vga_bmp.dcp
+  read_xdc C:/Users/ivr/Documents/GitHub/Zybo/practice_VGA_BMP/practice_VGA_BMP.srcs/constrs_1/imports/gradation/gradation.xdc
   link_design -top vga_bmp -part xc7z010clg400-1
   close_msg_db -file init_design.pb
 } RESULT]

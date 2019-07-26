@@ -2,21 +2,18 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Mon Jul 22 21:25:24 2019
+# Start of session at: Sat Jul 27 02:53:53 2019
 # Process ID: 2864
-# Current directory: C:/Users/fumi/Zybo/practice_VGA_BMP
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4808 C:\Users\fumi\Zybo\practice_VGA_BMP\practice_VGA_BMP.xpr
-# Log file: C:/Users/fumi/Zybo/practice_VGA_BMP/vivado.log
-# Journal file: C:/Users/fumi/Zybo/practice_VGA_BMP\vivado.jou
+# Current directory: C:/Users/ivr/Documents/GitHub/Zybo/practice_VGA_BMP
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8260 C:\Users\ivr\Documents\GitHub\Zybo\practice_VGA_BMP\practice_VGA_BMP.xpr
+# Log file: C:/Users/ivr/Documents/GitHub/Zybo/practice_VGA_BMP/vivado.log
+# Journal file: C:/Users/ivr/Documents/GitHub/Zybo/practice_VGA_BMP\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/fumi/Zybo/practice_VGA_BMP/practice_VGA_BMP.xpr
+open_project C:/Users/ivr/Documents/GitHub/Zybo/practice_VGA_BMP/practice_VGA_BMP.xpr
 update_compile_order -fileset sources_1
-launch_simulation
-open_wave_config C:/Users/fumi/Zybo/practice_VGA_BMP/vga_bmp_test_behav.wcfg
-source vga_bmp_test.tcl
-run all
-close_sim
-launch_runs synth_1 -jobs 12
-wait_on_run synth_1
-synth_design -rtl -name rtl_1
+1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_run impl_1

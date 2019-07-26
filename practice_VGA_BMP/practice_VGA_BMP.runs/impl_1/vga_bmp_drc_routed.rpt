@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Thu Jul 25 00:05:43 2019
-| Host         : FUMI3D2B running 64-bit major release  (build 9200)
+| Date         : Sat Jul 27 02:56:37 2019
+| Host         : LAPTOP-AG87OV99 running 64-bit major release  (build 9200)
 | Command      : report_drc -file vga_bmp_drc_routed.rpt -pb vga_bmp_drc_routed.pb -rpx vga_bmp_drc_routed.rpx
 | Design       : vga_bmp
 | Device       : xc7z010clg400-1
