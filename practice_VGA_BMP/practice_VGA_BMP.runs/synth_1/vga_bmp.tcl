@@ -17,29 +17,27 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7z010clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/fumi/Zybo/practice_VGA_BMP/practice_VGA_BMP.cache/wt [current_project]
-set_property parent.project_path C:/Users/fumi/Zybo/practice_VGA_BMP/practice_VGA_BMP.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/ivr/Documents/GitHub/Zybo/practice_VGA_BMP/practice_VGA_BMP.cache/wt [current_project]
+set_property parent.project_path C:/Users/ivr/Documents/GitHub/Zybo/practice_VGA_BMP/practice_VGA_BMP.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property board_part digilentinc.com:zybo-z7-10:part0:1.0 [current_project]
-set_property ip_output_repo c:/Users/fumi/Zybo/practice_VGA_BMP/practice_VGA_BMP.cache/ip [current_project]
+set_property ip_output_repo c:/Users/ivr/Documents/GitHub/Zybo/practice_VGA_BMP/practice_VGA_BMP.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_verilog C:/Users/fumi/Zybo/practice_VGA_BMP/practice_VGA_BMP.srcs/sources_1/imports/HDL/vga_param.vh
+read_verilog C:/Users/ivr/Documents/GitHub/Zybo/practice_VGA_BMP/practice_VGA_BMP.srcs/sources_1/imports/HDL/vga_param.vh
 read_mem {
-  C:/Users/fumi/Zybo/practice_VGA_BMP/practice_VGA_BMP.srcs/sources_1/new/white.mem
-  C:/Users/fumi/Zybo/practice_VGA_BMP/practice_VGA_BMP.srcs/sources_1/new/inuko.mem
+  C:/Users/ivr/Documents/GitHub/Zybo/practice_VGA_BMP/practice_VGA_BMP.srcs/sources_1/new/white.mem
+  C:/Users/ivr/Documents/GitHub/Zybo/practice_VGA_BMP/practice_VGA_BMP.srcs/sources_1/new/inuko.mem
 }
 read_verilog -library xil_defaultlib {
-  C:/Users/fumi/Zybo/practice_VGA_BMP/practice_VGA_BMP.srcs/sources_1/new/bmprom.v
-  C:/Users/fumi/Zybo/practice_VGA_BMP/practice_VGA_BMP.srcs/sources_1/imports/HDL/pckgen.v
-  C:/Users/fumi/Zybo/practice_VGA_BMP/practice_VGA_BMP.srcs/sources_1/imports/HDL/syncgen.v
-  C:/Users/fumi/Zybo/practice_VGA_BMP/practice_VGA_BMP.srcs/sources_1/imports/HDL/gradation.v
+  C:/Users/ivr/Documents/GitHub/Zybo/practice_VGA_BMP/practice_VGA_BMP.srcs/sources_1/new/bmprom.v
+  C:/Users/ivr/Documents/GitHub/Zybo/practice_VGA_BMP/practice_VGA_BMP.srcs/sources_1/imports/HDL/pckgen.v
+  C:/Users/ivr/Documents/GitHub/Zybo/practice_VGA_BMP/practice_VGA_BMP.srcs/sources_1/imports/HDL/syncgen.v
+  C:/Users/ivr/Documents/GitHub/Zybo/practice_VGA_BMP/practice_VGA_BMP.srcs/sources_1/imports/HDL/gradation.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -49,8 +47,8 @@ read_verilog -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/fumi/Zybo/practice_VGA_BMP/practice_VGA_BMP.srcs/constrs_1/imports/gradation/gradation.xdc
-set_property used_in_implementation false [get_files C:/Users/fumi/Zybo/practice_VGA_BMP/practice_VGA_BMP.srcs/constrs_1/imports/gradation/gradation.xdc]
+read_xdc C:/Users/ivr/Documents/GitHub/Zybo/practice_VGA_BMP/practice_VGA_BMP.srcs/constrs_1/imports/gradation/gradation.xdc
+set_property used_in_implementation false [get_files C:/Users/ivr/Documents/GitHub/Zybo/practice_VGA_BMP/practice_VGA_BMP.srcs/constrs_1/imports/gradation/gradation.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

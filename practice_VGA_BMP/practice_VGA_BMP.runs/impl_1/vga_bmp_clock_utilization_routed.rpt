@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Thu Jul 25 00:05:45 2019
-| Host         : FUMI3D2B running 64-bit major release  (build 9200)
+| Date         : Sat Jul 27 02:56:39 2019
+| Host         : LAPTOP-AG87OV99 running 64-bit major release  (build 9200)
 | Command      : report_clock_utilization -file vga_bmp_clock_utilization_routed.rpt
 | Design       : vga_bmp
 | Device       : 7z010-clg400
