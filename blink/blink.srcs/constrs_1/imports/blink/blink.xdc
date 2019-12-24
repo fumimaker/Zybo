@@ -3,14 +3,13 @@
 ## project: blink
 
 #Clock signal
-set_property PACKAGE_PIN L16 [get_ports {CLK}]
-set_property IOSTANDARD LVCMOS33 [get_ports {CLK}]
-create_clock -period 8.000 -name sys_clk_pin \
-    -waveform {0.000 4.000} -add [get_ports {CLK}]
+set_property PACKAGE_PIN L16 [get_ports CLK]
+set_property IOSTANDARD LVCMOS33 [get_ports CLK]
+create_clock -period 8.000 -name sys_clk_pin -waveform {0.000 4.000} -add [get_ports CLK]
 
 #Reset
-set_property PACKAGE_PIN Y16 [get_ports {RST}]
-set_property IOSTANDARD LVCMOS33 [get_ports {RST}]
+set_property PACKAGE_PIN Y16 [get_ports RST]
+set_property IOSTANDARD LVCMOS33 [get_ports RST]
 
 #LEDs
 set_property PACKAGE_PIN M14 [get_ports {LED[0]}]
@@ -90,3 +89,13 @@ set_property IOSTANDARD LVCMOS33 [get_ports {LED[3]}]
 
 #set_property PACKAGE_PIN T16 [get_ports {SW[3]}]
 #set_property IOSTANDARD LVCMOS33 [get_ports {SW[3]}]
+
+set_property MARK_DEBUG true [get_nets {LED_OBUF[0]}]
+set_property MARK_DEBUG true [get_nets {LED_OBUF[1]}]
+set_property MARK_DEBUG true [get_nets {LED_OBUF[2]}]
+set_property MARK_DEBUG true [get_nets {LED_OBUF[3]}]
+set_property MARK_DEBUG true [get_nets CLK_IBUF_BUFG]
+
+set_property MARK_DEBUG true [get_nets {cnt3[0]}]
+set_property MARK_DEBUG true [get_nets {cnt3[1]}]
+set_property MARK_DEBUG true [get_nets {cnt3[2]}]

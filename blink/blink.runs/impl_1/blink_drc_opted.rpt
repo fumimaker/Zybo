@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Fri Jun 21 18:49:28 2019
-| Host         : FUMI3D2B running 64-bit major release  (build 9200)
+| Date         : Tue Dec 24 15:17:19 2019
+| Host         : FUMIMAKER6BEE running 64-bit major release  (build 9200)
 | Command      : report_drc -file blink_drc_opted.rpt -pb blink_drc_opted.pb -rpx blink_drc_opted.rpx
 | Design       : blink
 | Device       : xc7z010clg400-1
@@ -20,7 +20,7 @@ Table of Contents
 1. REPORT SUMMARY
 -----------------
             Netlist: netlist
-          Floorplan: design_1
+          Floorplan: checkpoint_blink
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>

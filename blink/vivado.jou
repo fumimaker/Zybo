@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu Nov  7 14:23:47 2019
+# Process ID: 7224
+# Current directory: C:/Github/Zybo/blink
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9256 C:\Github\Zybo\blink\blink.xpr
+# Log file: C:/Github/Zybo/blink/vivado.log
+# Journal file: C:/Github/Zybo/blink\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Github/Zybo/blink/blink.xpr
+open_project C:/Github/Zybo/blink/blink.xpr

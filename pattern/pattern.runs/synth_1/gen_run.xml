@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1561126258">
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1577169738">
   <File Type="PA-TCL" Name="pattern.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="pattern_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="pattern_reports.tcl"/>
   <File Type="RDS-RDS" Name="pattern.vds"/>
   <File Type="RDS-UTIL" Name="pattern_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="pattern_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="pattern.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="pattern_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="pattern_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/HDL/pckgen.v">
@@ -52,6 +55,7 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/pattern/pattern.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
